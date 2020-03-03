@@ -13,21 +13,6 @@
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-            crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-            crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/b48621f243.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-            crossorigin="anonymous"></script>
-    <script src="assets/js/main.js"></script>
 </head>
 <body>
 <header>
@@ -36,7 +21,7 @@
             <img src="assets/img/logotype.png" alt="logo" class="brand-logo">
         </a>
         <ul class="navbar-nav d-lg-none order-3">
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="#"><i class="fas fa-user"></i></a>
             </li>
         </ul>
@@ -91,7 +76,7 @@
             </ul>
         </div>
     </nav>
-    <div class="container">.
+    <div class="container" id="booking">.
         <div class="row">
             <div class="col-10 col-xl-8 offset-1 offset-xl-2 d-none d-lg-block">
                 <h1 class="main-title text-center font-weight-bold">Book low cost airport transfer with fixed price and
@@ -138,10 +123,11 @@
                                     <input type="text" class="form-control" placeholder="Hotel name or full address">
                                     <div class="map col-12 col-md-6 d-block d-md-none px-0 mt-0">
                                         <div class="map-picker">
-                                            <p class="tab-pane-text">Hint about full address with an extensive fleet of vehicles and experienced
+                                            <p class="tab-pane-text">Hint about full address with an extensive fleet of
+                                                vehicles and experienced
                                                 professional drivers provide you low-cost</p>
                                             <a href="#" class="map-picker-link text-decoration-none">
-                                                <i class="fas fa-map-marker-alt mr-3"></i>
+                                                <i class="fas fa-map-marker-alt mr-sm-3"></i>
                                                 Choose drop-off location on map
                                             </a>
                                         </div>
@@ -180,7 +166,8 @@
                                 </div>
                                 <div class="map col-12 col-md-6 d-none d-md-block">
                                     <div class="map-picker">
-                                        <p class="tab-pane-text">Hint about full address with an extensive fleet of vehicles and experienced
+                                        <p class="tab-pane-text">Hint about full address with an extensive fleet of
+                                            vehicles and experienced
                                             professional drivers provide you low-cost</p>
                                         <a href="#" class="map-picker-link text-decoration-none">
                                             <i class="fas fa-map-marker-alt mr-3"></i>
@@ -249,20 +236,266 @@
                                         <input type="text" class="form-control" placeholder="1">
                                     </div>
                                     <div>
-                                        <span><img src="assets/img/icon-attention.png" alt="attention" class="icon-attention"></span>
+                                        <span>
+                                            <img src="assets/img/icon-attention.png" alt="attention"
+                                                 class="icon-attention">
+                                        </span>
                                         <p class="attention d-inline-block mt-1 mb-0">All fields are required</p>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6 d-flex justify-content-between align-items-center">
                                     <div class="d-none d-md-block">
-                                        <span class="mr-2"><img src="assets/img/icon-attention.png" alt="attention" class="icon-attention"></span>
+                                        <span class="mr-2"><img src="assets/img/icon-attention.png" alt="attention"
+                                                                class="icon-attention"></span>
                                         <p class="attention d-inline-block mt-1 mb-0">All fields are required</p>
                                     </div>
-                                    <button type="button" class="btn btn-primary d-block">Calculate Price</button>
+                                    <button type="button" class="btn btn-primary d-block mt-3 mt-mb-0">Calculate Price
+                                    </button>
                                 </div>
                             </div>
                         </form>
                     </div>
+
+                    <!--                    With map -->
+                    <div class="tab-pane fade show active d-none" id="fromAirport1" role="tabpanel"
+                         aria-labelledby="fromAirport-tab">
+                        <form>
+                            <div class="row">
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label class="form-control-label">Pick-up location
+                                        <span data-toggle="tooltip" data-placement="bottom"
+                                              title="Notice about this input full address with an extensive fleet of vehicles">
+                                            <i class="far fa-question-circle"></i>
+                                        </span>
+                                    </label>
+                                    <input type="text" class="form-control is-invalid"
+                                           placeholder="Search for an aiport">
+                                    <div class="invalid-feedback">
+                                        Please provide a valid city.
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 mb-3 mb-md-0">
+                                    <label class="form-control-label">Drop-off location
+                                        <span data-toggle="tooltip" data-placement="bottom"
+                                              title="Notice about this input full address with an extensive fleet of vehicles">
+                                            <i class="far fa-question-circle"></i>
+                                        </span>
+                                    </label>
+                                    <input type="text" class="form-control" placeholder="Hotel name or full address">
+                                    <div class="map col-12 col-md-6 d-block d-md-none px-0 mt-0">
+                                        <img src="assets/img/location-map.png" alt=location-map" class="w-100">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-6 mb-3">
+                                    <div class="row mb-3">
+                                        <div class="date-time-picker col-12 col-md-8">
+                                            <label class="form-control-label">Arrival date and time
+                                                <span data-toggle="tooltip" data-placement="bottom"
+                                                      title="Notice about this input full address with an extensive fleet of vehicles">
+                                            <i class="far fa-question-circle"></i>
+                                        </span>
+                                            </label>
+                                            <div class="date">
+                                                <input type="text" class="form-control datepicker-input d-inline-block"
+                                                       data-toggle="datetimepicker" data-target=".datepicker-input"
+                                                       placeholder="DD.MM.YYYY"/>
+                                                <input type="text" class="form-control timepicker-input d-inline-block"
+                                                       data-toggle="datetimepicker" data-target=".timepicker-input"
+                                                       placeholder="HH:MM"/>
+                                            </div>
+                                        </div>
+                                        <div class="passengers-picker col-5 col-md-4 d-none d-md-block">
+                                            <label class="form-control-label">Passengers
+                                                <span data-toggle="tooltip" data-placement="bottom"
+                                                      title="Notice about this input full address with an extensive fleet of vehicles">
+                                            <i class="far fa-question-circle"></i>
+                                        </span>
+                                            </label>
+                                            <input type="text" class="form-control" placeholder="1">
+                                        </div>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                                        <label class="form-check-label" for="defaultCheck1">
+                                            Book a round trip
+                                            <span data-toggle="tooltip" data-placement="bottom"
+                                                  title="Notice about this input full address with an extensive fleet of vehicles">
+                                            <i class="far fa-question-circle"></i>
+                                        </span>
+                                        </label>
+                                    </div>
+                                    <div class="row">
+                                        <div class="date-time-picker col-12 col-md-8">
+                                            <div class="date">
+                                                <input type="text" class="form-control datepicker-input d-inline-block"
+                                                       data-toggle="datetimepicker" data-target=".datepicker-input"
+                                                       placeholder="DD.MM.YYYY"/>
+                                                <input type="text" class="form-control timepicker-input d-inline-block"
+                                                       data-toggle="datetimepicker" data-target=".timepicker-input"
+                                                       placeholder="HH:MM"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="map col-12 col-md-6 d-none d-md-block">
+                                    <img src="assets/img/location-map.png" alt=location-map" class="w-100">
+                                </div>
+                                <div class="col-12 mb-3 d-block d-md-none">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                                        <label class="form-check-label" for="defaultCheck3">
+                                            Book a round trip
+                                            <span data-toggle="tooltip" data-placement="bottom"
+                                                  title="Notice about this input full address with an extensive fleet of vehicles">
+                                            <i class="far fa-question-circle"></i>
+                                        </span>
+                                        </label>
+                                    </div>
+                                    <div class="row">
+                                        <div class="date-time-picker col-12 col-md-8">
+                                            <div class="date">
+                                                <input type="text" class="form-control datepicker-input d-inline-block"
+                                                       data-toggle="datetimepicker" data-target=".datepicker-input"
+                                                       placeholder="DD.MM.YYYY"/>
+                                                <input type="text" class="form-control timepicker-input d-inline-block"
+                                                       data-toggle="datetimepicker" data-target=".timepicker-input"
+                                                       placeholder="HH:MM"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 mb-3 d-flex justify-content-between align-items-center d-md-none">
+                                    <div class="passengers-picker col-5 px-0">
+                                        <label class="form-control-label">Passengers
+                                            <span data-toggle="tooltip" data-placement="bottom"
+                                                  title="Notice about this input full address with an extensive fleet of vehicles">
+                                            <i class="far fa-question-circle"></i>
+                                        </span>
+                                        </label>
+                                        <input type="text" class="form-control" placeholder="1">
+                                    </div>
+                                    <div>
+                                        <span>
+                                            <img src="assets/img/icon-attention.png" alt="attention"
+                                                 class="icon-attention">
+                                        </span>
+                                        <p class="attention d-inline-block mt-1 mb-0">All fields are required</p>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 offset-md-6 d-flex justify-content-between align-items-center">
+                                    <div class="d-none d-md-block">
+                                        <span class="mr-2"><img src="assets/img/icon-attention.png" alt="attention"
+                                                                class="icon-attention"></span>
+                                        <p class="attention d-inline-block mt-1 mb-0">All fields are required</p>
+                                    </div>
+                                    <button type="button" class="btn btn-primary d-block mt-3 mt-mb-0">Calculate Price
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!--                    With map and without round trip -->
+                    <div class="tab-pane fade show active d-none" id="fromAirport2" role="tabpanel"
+                         aria-labelledby="fromAirport-tab">
+                        <form>
+                            <div class="row">
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label class="form-control-label">Pick-up location
+                                        <span data-toggle="tooltip" data-placement="bottom"
+                                              title="Notice about this input full address with an extensive fleet of vehicles">
+                                            <i class="far fa-question-circle"></i>
+                                        </span>
+                                    </label>
+                                    <input type="text" class="form-control is-invalid"
+                                           placeholder="Search for an aiport">
+                                    <div class="invalid-feedback">
+                                        Please provide a valid city.
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 mb-3 mb-md-0">
+                                    <label class="form-control-label">Drop-off location
+                                        <span data-toggle="tooltip" data-placement="bottom"
+                                              title="Notice about this input full address with an extensive fleet of vehicles">
+                                            <i class="far fa-question-circle"></i>
+                                        </span>
+                                    </label>
+                                    <input type="text" class="form-control" placeholder="Hotel name or full address">
+                                    <div class="map col-12 col-md-6 d-block d-md-none px-0 mt-0">
+                                        <img src="assets/img/location-map.png" alt=location-map" class="w-100">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-6 mb-3">
+                                    <div class="row mb-3">
+                                        <div class="date-time-picker col-12 col-md-8">
+                                            <label class="form-control-label">Arrival date and time
+                                                <span data-toggle="tooltip" data-placement="bottom"
+                                                      title="Notice about this input full address with an extensive fleet of vehicles">
+                                            <i class="far fa-question-circle"></i>
+                                        </span>
+                                            </label>
+                                            <div class="date">
+                                                <input type="text" class="form-control datepicker-input d-inline-block"
+                                                       data-toggle="datetimepicker" data-target=".datepicker-input"
+                                                       placeholder="DD.MM.YYYY"/>
+                                                <input type="text" class="form-control timepicker-input d-inline-block"
+                                                       data-toggle="datetimepicker" data-target=".timepicker-input"
+                                                       placeholder="HH:MM"/>
+                                            </div>
+                                        </div>
+                                        <div class="passengers-picker col-5 col-md-4 d-none d-md-block">
+                                            <label class="form-control-label">Passengers
+                                                <span data-toggle="tooltip" data-placement="bottom"
+                                                      title="Notice about this input full address with an extensive fleet of vehicles">
+                                            <i class="far fa-question-circle"></i>
+                                        </span>
+                                            </label>
+                                            <input type="text" class="form-control" placeholder="1">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="map col-12 col-md-6 d-none d-md-block">
+                                    <img src="assets/img/location-map.png" alt=location-map" class="w-100">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 mb-3 d-flex justify-content-between align-items-center d-md-none">
+                                    <div class="passengers-picker col-5 px-0">
+                                        <label class="form-control-label">Passengers
+                                            <span data-toggle="tooltip" data-placement="bottom"
+                                                  title="Notice about this input full address with an extensive fleet of vehicles">
+                                            <i class="far fa-question-circle"></i>
+                                        </span>
+                                        </label>
+                                        <input type="text" class="form-control" placeholder="1">
+                                    </div>
+                                    <div>
+                                        <span>
+                                            <img src="assets/img/icon-attention.png" alt="attention"
+                                                 class="icon-attention">
+                                        </span>
+                                        <p class="attention d-inline-block mt-1 mb-0">All fields are required</p>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 offset-md-6 d-flex justify-content-between align-items-center">
+                                    <div class="d-none d-md-block">
+                                        <span class="mr-2"><img src="assets/img/icon-attention.png" alt="attention"
+                                                                class="icon-attention"></span>
+                                        <p class="attention d-inline-block mt-1 mb-0">All fields are required</p>
+                                    </div>
+                                    <button type="button" class="btn btn-primary d-block mt-3 mt-mb-0">Calculate Price
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
                     <div class="tab-pane fade" id="toAirport" role="tabpanel" aria-labelledby="toAirport-tab">...</div>
                 </div>
             </div>
@@ -274,10 +507,10 @@
         <div class="row">
             <div class="col-12">
                 <h2 class="title text-center">Why Airport Taxis?</h2>
-                <p class="description col-12 col-md-8 offset-md-2 text-center">Airport Taxis with an extensive fleet of
-                    vehicles and experienced professional
-                    drivers provide you low-cost airport transfers</p>
-                <div class="d-flex flex-wrap flex-lg-nowrap justify-content-center mb-5">
+                <p class="description col-12 text-center">Airport Taxis with an extensive fleet of
+                    vehicles and experienced
+                    <br>professional drivers provide you low-cost airport transfers</p>
+                <div class="d-flex flex-wrap flex-lg-nowrap justify-content-center mb-md-5">
                     <div class="d-flex flex-nowrap justify-content-center">
                         <div class="reason-card">
                             <div class="reason-card-header rounded-circle">
@@ -313,7 +546,7 @@
                         </div>
                     </div>
                 </div>
-                <button type="button" class="btn btn-primary d-block m-auto">Book Transfer Now</button>
+                <a href="#booking" class="btn btn-primary d-block m-auto" role="button">Book Transfer Now</a>
             </div>
         </div>
     </div>
@@ -342,6 +575,9 @@
                             <div class="card-body car-price text-center">
                                 <p class="card-text mb-0">From</p>
                                 <h5 class="card-title">&#8364 150</h5>
+                                <a href="#booking" class="text-decoration-none">
+                                    <h5 class="card-title book">Book Transfer Now</h5>
+                                </a>
                             </div>
                             <div class="card-body text-center">
                                 <p class="card-text d-flex align-items-center mb-1">
@@ -377,6 +613,9 @@
                             <div class="card-body car-price text-center">
                                 <p class="card-text mb-0">From</p>
                                 <h5 class="card-title">&#8364 220</h5>
+                                <a href="#booking" class="text-decoration-none">
+                                    <h5 class="card-title book">Book Transfer Now</h5>
+                                </a>
                             </div>
                             <div class="card-body text-center">
                                 <p class="card-text d-flex align-items-center mb-1">
@@ -412,6 +651,9 @@
                             <div class="card-body car-price text-center">
                                 <p class="card-text mb-0">From</p>
                                 <h5 class="card-title">&#8364 125</h5>
+                                <a href="#booking" class="text-decoration-none">
+                                    <h5 class="card-title book">Book Transfer Now</h5>
+                                </a>
                             </div>
                             <div class="card-body text-center">
                                 <p class="card-text d-flex align-items-center mb-1">
@@ -445,7 +687,11 @@
                         </div>
                         <div class="col-5">
                             <div class="card-body car-price text-center">
-                                <h5 class="card-title">Book Transfer Now</h5>
+                                <p class="card-text mb-0">From</p>
+                                <h5 class="card-title">&#8364 250</h5>
+                                <a href="#booking" class="text-decoration-none">
+                                    <h5 class="card-title book">Book Transfer Now</h5>
+                                </a>
                             </div>
                             <div class="card-body text-center">
                                 <p class="card-text d-flex align-items-center mb-1">
@@ -486,22 +732,27 @@
                             </div>
                             <div>
                                 <div class="card-body text-center">
-                                    <p class="card-text d-flex align-items-center mb-1">
-                                        <img src="assets/img/icon-user.png" alt="user" class="icon mr-3">
-                                        4 passengers
-                                    </p>
-                                    <p class="card-text d-flex align-items-center mb-1">
-                                        <img src="assets/img/icon-bagage.png" alt="bagage" class="icon mr-3">
-                                        2 medium luggage
-                                    </p>
-                                    <p class="card-text d-flex align-items-center mb-1">
-                                        <img src="assets/img/icon-luggage.png" alt="luggage" class="icon mr-3">
-                                        2 small luggage
-                                    </p>
+                                    <div class="ml-4">
+                                        <p class="card-text d-flex align-items-center mb-1">
+                                            <img src="assets/img/icon-user.png" alt="user" class="icon mr-3">
+                                            4 passengers
+                                        </p>
+                                        <p class="card-text d-flex align-items-center mb-1">
+                                            <img src="assets/img/icon-bagage.png" alt="bagage" class="icon mr-3">
+                                            2 medium luggage
+                                        </p>
+                                        <p class="card-text d-flex align-items-center mb-1">
+                                            <img src="assets/img/icon-luggage.png" alt="luggage" class="icon mr-3">
+                                            2 small luggage
+                                        </p>
+                                    </div>
                                 </div>
                                 <div class="card-body car-price text-center">
                                     <p class="card-text mb-0">From</p>
                                     <h5 class="card-title">&#8364 150</h5>
+                                    <a href="#booking" class="text-decoration-none">
+                                        <h5 class="card-title book">Book Transfer Now</h5>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -519,22 +770,27 @@
                             </div>
                             <div>
                                 <div class="card-body text-center">
-                                    <p class="card-text d-flex align-items-center mb-1">
-                                        <img src="assets/img/icon-user.png" alt="user" class="icon mr-3">
-                                        8 passengers
-                                    </p>
-                                    <p class="card-text d-flex align-items-center mb-1">
-                                        <img src="assets/img/icon-bagage.png" alt="bagage" class="icon mr-3">
-                                        10 medium luggage
-                                    </p>
-                                    <p class="card-text d-flex align-items-center mb-1">
-                                        <img src="assets/img/icon-luggage.png" alt="luggage" class="icon mr-3">
-                                        16 small luggage
-                                    </p>
+                                    <div class="ml-4">
+                                        <p class="card-text d-flex align-items-center mb-1">
+                                            <img src="assets/img/icon-user.png" alt="user" class="icon mr-3">
+                                            8 passengers
+                                        </p>
+                                        <p class="card-text d-flex align-items-center mb-1">
+                                            <img src="assets/img/icon-bagage.png" alt="bagage" class="icon mr-3">
+                                            10 medium luggage
+                                        </p>
+                                        <p class="card-text d-flex align-items-center mb-1">
+                                            <img src="assets/img/icon-luggage.png" alt="luggage" class="icon mr-3">
+                                            16 small luggage
+                                        </p>
+                                    </div>
                                 </div>
                                 <div class="card-body car-price text-center">
                                     <p class="card-text mb-0">From</p>
                                     <h5 class="card-title">&#8364 220</h5>
+                                    <a href="#booking" class="text-decoration-none">
+                                        <h5 class="card-title book">Book Transfer Now</h5>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -552,22 +808,27 @@
                             </div>
                             <div>
                                 <div class="card-body text-center">
-                                    <p class="card-text d-flex align-items-center mb-1">
-                                        <img src="assets/img/icon-user.png" alt="user" class="icon mr-3">
-                                        10 passengers
-                                    </p>
-                                    <p class="card-text d-flex align-items-center mb-1">
-                                        <img src="assets/img/icon-bagage.png" alt="bagage" class="icon mr-3">
-                                        12 medium luggage
-                                    </p>
-                                    <p class="card-text d-flex align-items-center mb-1">
-                                        <img src="assets/img/icon-luggage.png" alt="luggage" class="icon mr-3">
-                                        18 small luggage
-                                    </p>
+                                    <div class="ml-4">
+                                        <p class="card-text d-flex align-items-center mb-1">
+                                            <img src="assets/img/icon-user.png" alt="user" class="icon mr-3">
+                                            10 passengers
+                                        </p>
+                                        <p class="card-text d-flex align-items-center mb-1">
+                                            <img src="assets/img/icon-bagage.png" alt="bagage" class="icon mr-3">
+                                            12 medium luggage
+                                        </p>
+                                        <p class="card-text d-flex align-items-center mb-1">
+                                            <img src="assets/img/icon-luggage.png" alt="luggage" class="icon mr-3">
+                                            18 small luggage
+                                        </p>
+                                    </div>
                                 </div>
                                 <div class="card-body car-price text-center">
                                     <p class="card-text mb-0">From</p>
                                     <h5 class="card-title">&#8364 125</h5>
+                                    <a href="#booking" class="text-decoration-none">
+                                        <h5 class="card-title book">Book Transfer Now</h5>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -585,21 +846,28 @@
                             </div>
                             <div>
                                 <div class="card-body text-center">
-                                    <p class="card-text d-flex align-items-center mb-1">
-                                        <img src="assets/img/icon-user.png" alt="user" class="icon mr-3">
-                                        4 passengers
-                                    </p>
-                                    <p class="card-text d-flex align-items-center mb-1">
-                                        <img src="assets/img/icon-bagage.png" alt="bagage" class="icon mr-3">
-                                        2 medium luggage
-                                    </p>
-                                    <p class="card-text d-flex align-items-center mb-1">
-                                        <img src="assets/img/icon-luggage.png" alt="luggage" class="icon mr-3">
-                                        2 small luggage
-                                    </p>
+                                    <div class="ml-4">
+                                        <p class="card-text d-flex align-items-center mb-1">
+                                            <img src="assets/img/icon-user.png" alt="user" class="icon mr-3">
+                                            4 passengers
+                                        </p>
+                                        <p class="card-text d-flex align-items-center mb-1">
+                                            <img src="assets/img/icon-bagage.png" alt="bagage" class="icon mr-3">
+                                            2 medium luggage
+                                        </p>
+                                        <p class="card-text d-flex align-items-center mb-1">
+                                            <img src="assets/img/icon-luggage.png" alt="luggage" class="icon mr-3">
+                                            2 small luggage
+                                        </p>
+                                    </div>
+
                                 </div>
                                 <div class="card-body car-price text-center">
-                                    <h5 class="card-title">Book Transfer Now</h5>
+                                    <p class="card-text mb-0">From</p>
+                                    <h5 class="card-title">&#8364 250</h5>
+                                    <a href="#booking" class="text-decoration-none">
+                                        <h5 class="card-title book">Book Transfer Now</h5>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -618,7 +886,7 @@
                     satisfied client</p>
             </div>
             <div class="card-deck owl-carousel col-12 mb-5">
-                <div class="card p-3">
+                <div class="card">
                     <div class="card-body">
                         <p class="card-text">My daughter and I and my partner need regular taxis from Charleroi Airport
                             to Leuven Hospital. In January 2015 when we found that the airport Shuttle form Charleroi to
@@ -641,7 +909,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card p-3">
+                <div class="card">
                     <div class="card-body">
                         <p class="card-text">Viajo mucho por mi trabajo y a veces llego tarde al aeropuerto de Charleroi
                             o Bruselas en este caso tengo que coger el taxi. Contacto siempre Airport Taxis. Se puede
@@ -664,7 +932,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card p-3">
+                <div class="card">
                     <div class="card-body">
                         <p class="card-text">We used this service last week, we had a transfer in Brussels, from BRU to
                             Charleroi. Price was very good (85 EUR for 5 people), the minivan was a new Mercedes, the
@@ -687,7 +955,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card p-3">
+                <div class="card">
                     <div class="card-body">
                         <p class="card-text">My daughter and I and my partner need regular taxis from Charleroi Airport
                             to Leuven Hospital. In January 2015 when we found that the airport Shuttle form Charleroi to
@@ -710,7 +978,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card p-3">
+                <div class="card">
                     <div class="card-body">
                         <p class="card-text">Viajo mucho por mi trabajo y a veces llego tarde al aeropuerto de Charleroi
                             o Bruselas en este caso tengo que coger el taxi. Contacto siempre Airport Taxis. Se puede
@@ -733,7 +1001,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card p-3">
+                <div class="card">
                     <div class="card-body">
                         <p class="card-text">We used this service last week, we had a transfer in Brussels, from BRU to
                             Charleroi. Price was very good (85 EUR for 5 people), the minivan was a new Mercedes, the
@@ -757,7 +1025,7 @@
                     </div>
                 </div>
             </div>
-            <button type="button" class="btn btn-primary d-block m-auto">Book Transfer Now</button>
+            <a href="#booking" type="button" class="btn btn-primary d-block m-auto">Book Transfer Now</a>
         </div>
     </div>
 </div>
@@ -769,8 +1037,8 @@
             </div>
             <div class="vehicles-carousel owl-carousel col-12 px-md-0">
                 <div class="vehicles-type">
-                    <div>
-                        <img src="assets/img/mercedes-benz.png" alt="mercedes-benz" class="vehicles-type-img m-auto"/>
+                    <div class="d-flex align-items-center">
+                        <img src="assets/img/car3.png" alt="mercedes-benz" class="vehicles-type-img"/>
                     </div>
                     <p class="vehicles-type-brand text-center">Mercedes-Benz S63 AMG Coupe</p>
                     <div class="vehicles-description justify-content-center">
@@ -789,13 +1057,14 @@
                             </div>
                         </div>
                         <div class="text-center d-none d-lg-inline-block mx-auto mx-lg-0">
-                            <button type="btn" class="btn btn-primary">Book Transfer Now</button>
+                            <a href="#booking" type="button" class="btn btn-primary d-block m-auto">Book Transfer
+                                Now</a>
                         </div>
                     </div>
                 </div>
                 <div class="vehicles-type">
                     <div>
-                        <img src="assets/img/mercedes-benz.png" alt="mercedes-benz" class="vehicles-type-img m-auto"/>
+                        <img src="assets/img/car1.png" alt="mercedes-benz" class="vehicles-type-img"/>
                     </div>
                     <p class="vehicles-type-brand text-center">Mercedes-Benz S63 AMG Coupe</p>
                     <div class="vehicles-description justify-content-center">
@@ -814,13 +1083,14 @@
                             </div>
                         </div>
                         <div class="text-center d-none d-lg-inline-block mx-auto mx-lg-0">
-                            <button type="btn" class="btn btn-primary">Book Transfer Now</button>
+                            <a href="#booking" type="button" class="btn btn-primary d-block my-auto">Book Transfer
+                                Now</a>
                         </div>
                     </div>
                 </div>
                 <div class="vehicles-type">
                     <div>
-                        <img src="assets/img/mercedes-benz.png" alt="mercedes-benz" class="vehicles-type-img m-auto"/>
+                        <img src="assets/img/car2.png" alt="mercedes-benz" class="vehicles-type-img"/>
                     </div>
                     <p class="vehicles-type-brand text-center">Mercedes-Benz S63 AMG Coupe</p>
                     <div class="vehicles-description justify-content-center">
@@ -839,13 +1109,14 @@
                             </div>
                         </div>
                         <div class="text-center d-none d-lg-inline-block mx-auto mx-lg-0">
-                            <button type="btn" class="btn btn-primary">Book Transfer Now</button>
+                            <a href="#booking" type="button" class="btn btn-primary d-block m-auto">Book Transfer
+                                Now</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="text-center d-block d-lg-none mx-auto mx-lg-0 mt-4">
-                <button type="btn" class="btn btn-primary">Book Transfer Now</button>
+                <a href="#booking" type="button" class="btn btn-primary d-block m-auto">Book Transfer Now</a>
             </div>
         </div>
     </div>
@@ -858,7 +1129,8 @@
                 <p class="subheader text-center text-lg-left"><strong>Airport Taxis with an extensive fleet of vehicles
                     and experienced professional drivers
                     provide you low-cost airport transfers</strong></p>
-                <p class="about-text">The carrier knows beforehand when you arrive at the airport: the taxi will already
+                <p class="about-text text-center text-lg-left">The carrier knows beforehand when you arrive at the
+                    airport: the taxi will already
                     be waiting for you
                     at the taxi rank, and the taxi driver will meet you as close to the arrivals area as the airport
                     rules allow. The same applies to transfers from train stations and hotels: the driver will be
@@ -1284,16 +1556,16 @@
                             </div>
                             <strong>Düsseldorf</strong>
                         </li>
-                    </ul>
-                </div>
-                <div class="d-flex align-items-start justify-content-center">
-                    <ul class="list-group">
                         <li class="list-group-item">
                             <div class="home-icon">
                                 <img src="assets/img/icon-home.png" alt="icon-home" class="icon-home"/>
                             </div>
                             <strong>Zaventem</strong>
                         </li>
+                    </ul>
+                </div>
+                <div class="d-flex align-items-start justify-content-center">
+                    <ul class="list-group">
                         <li class="list-group-item">
                             <div class="home-icon">
                                 <img src="assets/img/icon-home.png" alt="icon-home" class="icon-home"/>
@@ -1324,14 +1596,14 @@
                             </div>
                             <strong>Bruges</strong>
                         </li>
-                    </ul>
-                    <ul class="list-group">
                         <li class="list-group-item">
                             <div class="home-icon">
                                 <img src="assets/img/icon-home.png" alt="icon-home" class="icon-home"/>
                             </div>
                             <strong>Kortrijk</strong>
                         </li>
+                    </ul>
+                    <ul class="list-group">
                         <li class="list-group-item">
                             <div class="home-icon">
                                 <img src="assets/img/icon-home.png" alt="icon-home" class="icon-home"/>
@@ -1356,10 +1628,6 @@
                             </div>
                             <strong>Sint-Martens-Latem</strong>
                         </li>
-                    </ul>
-                </div>
-                <div class="d-flex align-items-start justify-content-center">
-                    <ul class="list-group">
                         <li class="list-group-item">
                             <div class="home-icon">
                                 <img src="assets/img/icon-home.png" alt="icon-home" class="icon-home"/>
@@ -1372,6 +1640,10 @@
                             </div>
                             <strong>Tienen</strong>
                         </li>
+                    </ul>
+                </div>
+                <div class="d-flex align-items-start justify-content-center">
+                    <ul class="list-group">
                         <li class="list-group-item">
                             <div class="home-icon">
                                 <img src="assets/img/icon-home.png" alt="icon-home" class="icon-home"/>
@@ -1396,8 +1668,6 @@
                             </div>
                             <strong>Diest</strong>
                         </li>
-                    </ul>
-                    <ul class="list-group">
                         <li class="list-group-item">
                             <div class="home-icon">
                                 <img src="assets/img/icon-home.png" alt="icon-home" class="icon-home"/>
@@ -1410,6 +1680,8 @@
                             </div>
                             <strong>Aarschot</strong>
                         </li>
+                    </ul>
+                    <ul class="list-group">
                         <li class="list-group-item">
                             <div class="home-icon">
                                 <img src="assets/img/icon-home.png" alt="icon-home" class="icon-home"/>
@@ -1428,10 +1700,6 @@
                             </div>
                             <strong>Turnhout</strong>
                         </li>
-                    </ul>
-                </div>
-                <div class="d-flex align-items-start justify-content-center">
-                    <ul class="list-group">
                         <li class="list-group-item">
                             <div class="home-icon">
                                 <img src="assets/img/icon-home.png" alt="icon-home" class="icon-home"/>
@@ -1450,6 +1718,10 @@
                             </div>
                             <strong>Geraardsbergen</strong>
                         </li>
+                    </ul>
+                </div>
+                <div class="d-flex align-items-start justify-content-center">
+                    <ul class="list-group">
                         <li class="list-group-item">
                             <div class="home-icon">
                                 <img src="assets/img/icon-home.png" alt="icon-home" class="icon-home"/>
@@ -1468,8 +1740,6 @@
                             </div>
                             <strong>Machelen</strong>
                         </li>
-                    </ul>
-                    <ul class="list-group">
                         <li class="list-group-item">
                             <div class="home-icon">
                                 <img src="assets/img/icon-home.png" alt="icon-home" class="icon-home"/>
@@ -1488,6 +1758,8 @@
                             </div>
                             <strong>Opwijk</strong>
                         </li>
+                    </ul>
+                    <ul class="list-group">
                         <li class="list-group-item">
                             <div class="home-icon">
                                 <img src="assets/img/icon-home.png" alt="icon-home" class="icon-home"/>
@@ -1500,10 +1772,6 @@
                             </div>
                             <strong>Overijse</strong>
                         </li>
-                    </ul>
-                </div>
-                <div class="d-flex align-items-start justify-content-center">
-                    <ul class="list-group">
                         <li class="list-group-item">
                             <div class="home-icon">
                                 <img src="assets/img/icon-home.png" alt="icon-home" class="icon-home"/>
@@ -1528,19 +1796,9 @@
                             </div>
                             <strong>Pepingen</strong>
                         </li>
-                        <li class="list-group-item">
-                            <div class="home-icon">
-                                <img src="assets/img/icon-home.png" alt="icon-home" class="icon-home"/>
-                            </div>
-                            <strong>Sint-Pieters-Leeuw</strong>
-                        </li>
-                        <li class="list-group-item">
-                            <div class="home-icon">
-                                <img src="assets/img/icon-home.png" alt="icon-home" class="icon-home"/>
-                            </div>
-                            <strong>Rotselaar</strong>
-                        </li>
                     </ul>
+                </div>
+                <div class="d-flex align-items-start justify-content-center">
                     <ul class="list-group">
                         <li class="list-group-item">
                             <div class="home-icon">
@@ -1570,7 +1828,13 @@
                             <div class="home-icon">
                                 <img src="assets/img/icon-home.png" alt="icon-home" class="icon-home"/>
                             </div>
-                            <strong>Zemst</strong>
+                            <strong>Sint-Pieters-Leeuw</strong>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="home-icon">
+                                <img src="assets/img/icon-home.png" alt="icon-home" class="icon-home"/>
+                            </div>
+                            <strong>Rotselaar</strong>
                         </li>
                     </ul>
                 </div>
@@ -1608,11 +1872,26 @@
             </div>
             <div class="col-10 col-md-8 col-lg-6 offset-1 offset-md-2 offset-lg-3">
                 <p class="footer-text text-center ">Airport-taxis.be provides low-cost airport transfers since 2007
-                    © </p>
-                <p class="footer-text text-center ">2020 All Rights Reserved.</p>
+                    © 2020 </p>
+                <p class="footer-text text-center ">All Rights Reserved.</p>
             </div>
         </div>
     </div>
 </footer>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/b48621f243.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+<script src="assets/js/owl.carousel.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>

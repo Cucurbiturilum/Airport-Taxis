@@ -5,527 +5,520 @@ $primary-color: #0091FF;
 
 @import "stylesheet.css";
 
+html {
+  scroll-behavior: smooth;
 
-header {
-  background-image: url(../../assets/img/background.png);
-  background-size: cover;
-  font-family: HelveticaNeueCyr, sans-serif;
-  padding-bottom: 5rem;
-  @media (max-width: 520px) {
-    padding-bottom: 2rem;
-  }
-
-  .navbar {
-    margin-bottom: 2rem;
-    @media (min-width: 990px) {
-      padding: 1rem 4rem;
+  header {
+    background-image: url(../../assets/img/background.png);
+    background-size: cover;
+    font-family: HelveticaNeueCyr, sans-serif;
+    padding-bottom: 5rem;
+    @media (max-width: 520px) {
+      padding-bottom: 2rem;
     }
 
-    .navbar-brand {
-      margin-right: 0;
+    .navbar {
+      margin-bottom: 2rem;
+      @media (max-width: 520px) {
+        margin-bottom: 0;
+      }
+      @media (min-width: 990px) {
+        padding: 1rem 4rem;
+      }
 
-      .brand-logo {
-        width: 100%;
-        @media(max-width: 990px) {
-          width: 50%;
+      .navbar-brand {
+        margin-right: 0;
+
+        .brand-logo {
+          width: 100%;
+          @media(max-width: 990px) {
+            width: 50%;
+          }
         }
       }
-    }
 
-    .navbar-toggler {
-      .navbar-toggler-icon {
-        width: 1.3rem;
-        height: 1.3rem;
+      .navbar-toggler {
+        .navbar-toggler-icon {
+          width: 1.3rem;
+          height: 1.3rem;
+        }
       }
-    }
 
-    .navbar-nav {
-      .nav-item {
-        .nav-link {
-          color: $font-color;
-          font-weight: 600;
-          font-size: 1rem;
+      .navbar-nav {
+        .nav-item {
+          &.active {
+            .nav-link {
+              color: $main-color;
+            }
+          }
 
-          &.login {
-            color: $main-color;
-            padding: 0.5rem 1.5rem;
-            background-color: $font-color;
+          .nav-link {
+            color: $font-color;
             font-weight: 600;
-            margin-left: 1rem;
+            font-size: 1rem;
+
+            &:hover {
+              color: $main-color;
+            }
+
+            &.login {
+              color: $main-color;
+              padding: 0.5rem 1.5rem;
+              background-color: $font-color;
+              font-weight: 600;
+              margin-left: 1rem;
+
+              &:hover {
+                background-color: #e3e3e3;
+              }
+            }
           }
-        }
 
-        .dropdown-menu {
-          .dropdown-item {
-            color: $main-color;
+          .dropdown-menu {
+            .dropdown-item {
+              color: $main-color;
 
-            .flag {
-              margin-right: 1rem;
-              vertical-align: text-bottom;
+              .flag {
+                margin-right: 1rem;
+                vertical-align: text-bottom;
 
-              .flag-img {
-                width: 30px;
-                height: 17px;
+                .flag-img {
+                  width: 30px;
+                  height: 17px;
+                }
               }
             }
           }
         }
       }
     }
-  }
 
-  .main-title {
-    color: $font-color;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-  }
-
-  .nav-tabs {
-    border: none;
-
-    .nav-item {
-      position: relative;
-
-      .nav-link {
-        color: $main-color;
-        background-color: $secondary-color;
-        font-size: 1.125rem;
-        font-weight: bold;
-        border: none;
-        border-radius: 0;
-        padding: 1rem;
-        @media (min-width: 990px) {
-          padding: 1.5rem;
-        }
-
-        &.active {
-          background-color: $main-color;
-          color: $font-color;
-
-          &:after {
-            content: "";
-            display: block;
-            position: absolute;
-            bottom: -20px;
-            left: calc(50% - 20px);
-            width: 0;
-            height: 0;
-            border-left: 20px solid transparent;
-            border-right: 20px solid transparent;
-            border-top: 20px solid $main-color;
-          }
-        }
-      }
+    .main-title {
+      color: $font-color;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
     }
-  }
 
-  .tab-content {
-    padding: calc(20px + 2rem) 2rem;
-    background-color: $font-color;
+    .nav-tabs {
+      border: none;
 
-    form {
-      .form-control-label {
-        color: $main-color;
-        font-size: 0.875rem;
-        font-weight: bold;
+      .nav-item {
+        position: relative;
 
-        .fa-question-circle {
+        .nav-link {
           color: $main-color;
-          opacity: 0.3;
-        }
-
-        @media (min-width: 768px) and (max-width: 1200px) {
-          font-size: 0.7rem;
-        }
-      }
-
-      .form-control {
-        height: 70px;
-        color: $main-color;
-        border-color: #E5E5E5;
-        border-radius: 0;
-        padding-left: 0.5rem;
-        @media (max-width: 768px) {
-          height: 50px;
-        }
-
-        &::placeholder {
-          color: $main-color;
-        }
-
-        &:focus {
-          box-shadow: none;
-          border-color: #E5E5E5;
-        }
-      }
-
-      .date-time-picker {
-
-        .date {
-          border: 1px solid #E5E5E5;
-
-          .datepicker-input {
-            width: 58%;
-            border-top: none;
-            border-left: none;
-            border-bottom: none;
-            border-right: 1px solid #E5E5E5;
-            font-size: 1rem;
-            @media (min-width: 768px) and (max-width: 1200px) {
-              font-size: 0.875rem;
-            }
-
-            &::placeholder {
-              color: $main-color;
-              font-size: 1rem;
-              @media (min-width: 768px) and (max-width: 1200px) {
-                font-size: 0.875rem;
-              }
-            }
-          }
-
-          .timepicker-input {
-            width: 40%;
-            border: none;
-            font-size: 1rem;
-            @media (min-width: 768px) and (max-width: 1200px) {
-              font-size: 0.875rem;
-              width: 38%;
-            }
-
-            &::placeholder {
-              color: $main-color;
-              font-size: 1rem;
-              @media (min-width: 768px) and (max-width: 1200px) {
-                font-size: 0.875rem;
-              }
-            }
-          }
-        }
-      }
-
-      .passengers-picker {
-        font-size: 1rem;
-      }
-
-      .map {
-        margin-top: -2.5rem;
-
-        .map-picker {
           background-color: $secondary-color;
-          padding: 1.25rem 2.2rem;
-          @media (min-width: 768px) and (max-width: 1200px) {
-            padding: 0.8rem 2rem;
+          font-size: 1.125rem;
+          font-weight: bold;
+          border: none;
+          border-radius: 0;
+          padding: 1rem;
+          @media (min-width: 990px) {
+            padding: 1.5rem;
           }
 
-          .tab-pane-text {
-            color: $main-color;
-            font-size: 0.875rem;
-            @media (min-width: 768px) and (max-width: 1200px) {
-              font-size: 0.75rem;
-            }
-          }
+          &.active {
+            background-color: $main-color;
+            color: $font-color;
 
-          .map-picker-link {
-            color: $primary-color;
-            font-size: 0.875rem;
-            font-weight: bold;
-            @media (min-width: 768px) and (max-width: 1200px) {
-              font-size: 0.75rem;
+            &:after {
+              content: "";
+              display: block;
+              position: absolute;
+              bottom: -20px;
+              left: calc(50% - 20px);
+              width: 0;
+              height: 0;
+              border-left: 20px solid transparent;
+              border-right: 20px solid transparent;
+              border-top: 20px solid $main-color;
             }
           }
         }
       }
+    }
 
-      .form-check {
-        margin-bottom: 0.5rem;
+    .tab-content {
+      padding: 2rem;
+      padding-top: calc(20px + 2rem);
+      background-color: $font-color;
+      @media (max-width: 520px) {
+        padding: calc(20px + 1rem) 2rem;
+      }
 
-        .form-check-label {
+      form {
+        .form-control-label {
           color: $main-color;
           font-size: 0.875rem;
           font-weight: bold;
-          @media (min-width: 768px) and (max-width: 1200px) {
-            font-size: 0.7rem;
-          }
 
           .fa-question-circle {
             color: $main-color;
             opacity: 0.3;
           }
-        }
 
-        .form-check-input {
-          width: 1rem;
-          height: 1rem;
-        }
-      }
-
-      .btn-primary {
-        width: 210px;
-        @media  (max-width: 768px) {
-          width: 100%;
-        }
-        @media (min-width: 768px) and (max-width: 1200px) {
-          width: 150px;
-          font-size: 1rem;
-          padding: 0 0.5rem;
-        }
-      }
-
-      .icon-attention {
-        @media (min-width: 768px) and (max-width: 1200px) {
-          height: 10px;
-          width: 10px;
-        }
-      }
-
-      .attention {
-        font-size: 0.875rem;
-        color: $main-color;
-        @media (min-width: 768px) and (max-width: 1200px) {
-          font-size: 0.8rem;
-        }
-      }
-    }
-  }
-}
-
-.ui-corner-all {
-  font-size: 1rem;
-  padding: 0;
-}
-
-.title {
-  color: $main-color;
-  font-weight: bold;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  @media (max-width: 520px) {
-    font-size: 1.875rem;
-  }
-}
-
-.description {
-  color: $main-color;
-  font-size: 1.125rem;
-  margin-bottom: 4rem;
-}
-
-.reason, .price, .review, .vehicles, .about, .top-destinations {
-  font-family: HelveticaNeueCyr, sans-serif;
-  padding: 5rem 0;
-  @media (max-width: 520px) {
-    padding: 2rem 0;
-  }
-}
-
-.reason {
-  background-color: #FAFAFF;
-
-  .reason-card {
-    padding: 0 1.8rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 1.2rem;
-
-    .reason-card-header {
-      border: 2px solid $primary-color;
-      height: 100px;
-      width: 100px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 1rem;
-      @media (max-width: 425px) {
-        width: 75px;
-        height: 75px;
-      }
-
-      .reason-card-img {
-        width: 36px;
-      }
-    }
-
-    .reason-card-body {
-      color: $main-color;
-      font-weight: bold;
-      max-width: 160px;
-      @media (max-width: 425px) {
-        font-size: 0.8rem;
-        width: auto;
-      }
-    }
-  }
-
-}
-
-.btn-primary {
-  background-color: $primary-color;
-  color: $font-color;
-  font-size: 1.125rem;
-  font-weight: bold;
-  height: 70px;
-  width: 240px;
-  border-radius: 0;
-  box-shadow: 0 10px 15px 0 rgba(0, 145, 255, 0.1);
-
-  &:focus, &:active, &:hover {
-    box-shadow: 0 10px 15px 0 rgba(0, 145, 255, 0.1);
-    background-color: $primary-color;
-    border: none;
-    outline: none;
-  }
-}
-
-.price {
-
-  .card {
-    border: 2px solid $primary-color;
-    border-radius: 0;
-    box-shadow: 0 10px 15px 0 rgba(0, 145, 255, 0.1);
-    margin-bottom: 30px;
-
-    .car-make {
-
-      .media {
-        align-items: center;
-        margin-bottom: 1.8rem;
-
-        .media-title {
-          color: $main-color;
-          font-size: 1.5rem;
-          @media (min-width: 990px) and (max-width: 1200px) {
-            font-size: 1.1rem;
+          @media (min-width: 768px) and (max-width: 1200px) {
+            font-size: 0.7rem;
           }
         }
-      }
 
-      .card-text {
-        font-size: 1.125rem;
-        color: $main-color;
-      }
-    }
-
-    .card-body {
-      background-color: $secondary-color;
-      margin-bottom: 1px;
-      margin-right: 1px;
-
-      .card-text {
-        font-size: 0.875rem;
-        font-weight: bold;
-        color: $main-color;
-        text-align: center;
-        @media (min-width: 990px) and (max-width: 1200px) {
-          font-size: 0.75rem;
-        }
-
-        .icon {
-          width: 1rem;
-        }
-      }
-    }
-
-    .car-price {
-      background-color: $primary-color;
-      margin-right: 0;
-      height: 5rem;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-
-      .card-text {
-        color: $font-color;
-        opacity: 0.5;
-        font-size: 0.875rem;
-        font-weight: normal;
-      }
-
-      .card-title {
-        color: $font-color;
-        font-size: 1.5rem;
-        font-weight: bold;
-        margin-bottom: 0;
-      }
-    }
-
-    &:last-of-type {
-      .car-price {
-        .card-title {
-          font-size: 1.125rem;
-        }
-      }
-    }
-  }
-
-  .carousel {
-    .carousel-indicators {
-      bottom: -1.125rem;
-
-      .carouselIndicators {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: $primary-color;
-        opacity: 0.5;
-        margin: 0 0.5rem;
-
-        &.active {
-          opacity: 1;
-        }
-      }
-    }
-  }
-}
-
-.review {
-  background-color: #FAFAFF;
-
-  .card-deck {
-    .card {
-      border: none;
-
-      .card-body {
-        height: 30rem;
-        overflow: hidden;
-
-        .card-text {
+        .form-control {
+          height: 70px;
           color: $main-color;
-          font-size: 1.125rem;
-          line-height: 34px;
+          border-color: #E5E5E5;
+          border-radius: 0;
+          padding-left: 0.5rem;
+          @media (max-width: 768px) {
+            height: 50px;
+          }
+
+          &::placeholder {
+            color: $main-color;
+            font-weight: 300;
+          }
+
+          &:focus {
+            box-shadow: none;
+            border-color: #E5E5E5;
+          }
         }
-      }
 
-      .card-footer {
-        border: none;
-        display: flex;
-        align-items: center;
-        background-color: $font-color;
+        .date-time-picker {
 
-        .user-avatar {
-          height: 50px;
-          width: 50px;
-          border-radius: 50%;
-          overflow: hidden;
-          margin-right: 1rem;
+          .date {
+            border: 1px solid #E5E5E5;
 
-          .user-avatar-img {
+            .datepicker-input {
+              width: 58%;
+              border-top: none;
+              border-left: none;
+              border-bottom: none;
+              border-right: 1px solid #E5E5E5;
+              font-size: 1rem;
+              @media (min-width: 768px) and (max-width: 1200px) {
+                font-size: 0.875rem;
+              }
+
+              &::placeholder {
+                color: $main-color;
+                font-size: 1rem;
+                @media (min-width: 768px) and (max-width: 1200px) {
+                  font-size: 0.875rem;
+                }
+              }
+            }
+
+            .timepicker-input {
+              width: 40%;
+              border: none;
+              font-size: 1rem;
+              @media (min-width: 768px) and (max-width: 1200px) {
+                font-size: 0.875rem;
+                width: 38%;
+              }
+
+              &::placeholder {
+                color: $main-color;
+                font-size: 1rem;
+                @media (min-width: 768px) and (max-width: 1200px) {
+                  font-size: 0.875rem;
+                }
+              }
+            }
+          }
+        }
+
+        .passengers-picker {
+          font-size: 1rem;
+        }
+
+        .map {
+          margin-top: -2.5rem;
+
+          .map-picker {
+            background-color: $secondary-color;
+            padding: 1.25rem 2.2rem;
+            @media (min-width: 768px) and (max-width: 1200px) {
+              padding: 0.8rem 2rem;
+            }
+
+            .tab-pane-text {
+              color: $main-color;
+              font-size: 0.875rem;
+              @media (min-width: 768px) and (max-width: 1200px) {
+                font-size: 0.75rem;
+              }
+            }
+
+            .map-picker-link {
+              color: $primary-color;
+              font-size: 0.875rem;
+              font-weight: bold;
+              @media (max-width: 520px) {
+                font-size: 0.7rem;
+              }
+              @media (min-width: 768px) and (max-width: 1200px) {
+                font-size: 0.75rem;
+              }
+            }
+          }
+        }
+
+        .form-check {
+          margin-bottom: 0.5rem;
+
+          .form-check-label {
+            color: $main-color;
+            font-size: 0.875rem;
+            font-weight: bold;
+            @media (min-width: 768px) and (max-width: 1200px) {
+              font-size: 0.7rem;
+            }
+
+            .fa-question-circle {
+              color: $main-color;
+              opacity: 0.3;
+            }
+          }
+
+          .form-check-input {
+            width: 1rem;
+            height: 1rem;
+          }
+        }
+
+        .btn-primary {
+          width: 210px;
+          @media (max-width: 768px) {
             width: 100%;
           }
+          @media (min-width: 768px) and (max-width: 1200px) {
+            width: 150px;
+            font-size: 1rem;
+            padding: 0 0.5rem;
+          }
         }
 
-        .card-title {
-          margin-bottom: 0;
-          color: $primary-color;
-          font-weight: bold;
+        .icon-attention {
+          @media (min-width: 768px) and (max-width: 1200px) {
+            height: 10px;
+            width: 10px;
+          }
+        }
+
+        .attention {
           font-size: 0.875rem;
+          color: $main-color;
+          @media (min-width: 768px) and (max-width: 1200px) {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+
+  .ui-corner-all {
+    font-size: 1rem;
+    padding: 0;
+  }
+
+  .title {
+    color: $main-color;
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    @media (max-width: 520px) {
+      font-size: 1.875rem;
+    }
+  }
+
+  .description {
+    color: $main-color;
+    font-size: 1.125rem;
+    margin-bottom: 3.75rem;
+    @media (max-width: 520rem) {
+      margin-bottom: 1.25rem;
+    }
+
+  }
+
+  .reason, .price, .review, .vehicles, .about, .top-destinations {
+    font-family: HelveticaNeueCyr, sans-serif;
+    padding: 5rem 0;
+    @media (max-width: 520px) {
+      padding: 4rem 0;
+    }
+  }
+
+  .reason {
+    background-color: #FAFAFF;
+
+    .reason-card {
+      padding: 0 1.8rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1.2rem;
+
+      .reason-card-header {
+        border: 4px solid $primary-color;
+        height: 100px;
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+        @media (max-width: 425px) {
+          width: 75px;
+          height: 75px;
         }
 
-        .review-star {
-          color: #FFD11C;
-          opacity: 0.3;
-          font-size: 0.825rem;
+        .reason-card-img {
+          width: 36px;
+        }
+      }
+
+      .reason-card-body {
+        color: $main-color;
+        font-weight: bold;
+        max-width: 160px;
+        @media (max-width: 425px) {
+          font-size: 0.8rem;
+          width: auto;
+        }
+      }
+    }
+
+  }
+
+  .btn-primary {
+    background-color: $primary-color;
+    color: $font-color;
+    font-size: 1.125rem;
+    font-weight: bold;
+    line-height: 70px;
+    width: 240px;
+    border-radius: 0;
+    box-shadow: 0 10px 15px 0 rgba(0, 145, 255, 0.1);
+    text-decoration: none;
+
+    &:focus, &:active {
+      box-shadow: 0 10px 15px 0 rgba(0, 145, 255, 0.1);
+      background-color: $primary-color;
+      border: none;
+      outline: none;
+    }
+
+    &:hover {
+      background-color: #0082E6;
+    }
+  }
+
+  .price {
+    padding-bottom: 7rem;
+
+    .card {
+      border: 2px solid $primary-color;
+      border-radius: 0;
+      box-shadow: 0 10px 15px 0 rgba(0, 145, 255, 0.1);
+      margin: 15px;
+
+      .car-make {
+
+        .media {
+          align-items: center;
+          margin-bottom: 1.8rem;
+
+          .media-title {
+            color: #0A1E2D;
+            font-size: 1.5rem;
+            @media (min-width: 990px) and (max-width: 1200px) {
+              font-size: 1.1rem;
+            }
+          }
+        }
+
+        .card-text {
+          font-size: 1.125rem;
+          color: #0A1E2D;
+          font-weight: 300;
+        }
+      }
+
+      .card-body {
+        background-color: $secondary-color;
+
+        .card-text {
+          font-size: 0.875rem;
+          font-weight: bold;
+          color: #0A1E2D;
+          text-align: center;
+          @media (min-width: 990px) and (max-width: 1200px) {
+            font-size: 0.75rem;
+          }
+
+          .icon {
+            width: 1rem;
+          }
+        }
+
+        &.car-price {
+          background-color: $primary-color;
+          margin-right: 0;
+          height: 5rem;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+
+          .card-text {
+            color: $font-color;
+            opacity: 0.5;
+            font-size: 0.875rem;
+            font-weight: normal;
+          }
+
+          .card-title {
+            color: $font-color;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 0;
+
+            &.book {
+              display: none;
+            }
+          }
+
+          &:hover {
+            .card-text {
+              display: none;
+            }
+
+            .card-title {
+              display: none;
+
+              &.book {
+                display: block;
+                font-size: 1.125rem;
+                padding: 0;
+              }
+            }
+          }
+        }
+      }
+
+    }
+
+    .carousel {
+      .carousel-indicators {
+        bottom: -5rem;
+
+        .carouselIndicators {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: $primary-color;
+          opacity: 0.5;
+          margin: 0 0.5rem;
 
           &.active {
             opacity: 1;
@@ -533,183 +526,403 @@ header {
         }
       }
     }
+  }
 
-    .owl-nav {
-      .owl-prev, .owl-next {
-        position: absolute;
-        top: calc(50% - 7px);
-        border: 1px solid $primary-color;
-        border-radius: 50%;
-        height: 50px;
-        width: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+  .review {
+    background-color: #FAFAFF;
 
-        &:active, &:focus {
-          background-color: $primary-color;
-          outline: none;
+    .card-deck {
+      .card {
+        height: 500px;
+        border: none;
+        border-radius: 0;
+        padding: 1.875rem;
+        @media (max-width: 520px) {
+          padding: 1.2rem;
+        }
+
+        .card-body {
+          overflow: hidden;
+          padding: 0;
+
+
+          .card-text {
+            color: $main-color;
+            font-size: 1.125rem;
+            line-height: 34px;
+          }
+        }
+
+        .card-footer {
+          padding: 0;
+          border: none;
+          display: flex;
+          align-items: center;
+          background-color: $font-color;
+
+          .user-avatar {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 1rem;
+
+            .user-avatar-img {
+              width: 100%;
+            }
+          }
+
+          .card-title {
+            margin-bottom: 0;
+            color: $primary-color;
+            font-weight: bold;
+            font-size: 0.875rem;
+          }
+
+          .review-star {
+            color: #FFD11C;
+            opacity: 0.3;
+            font-size: 0.825rem;
+
+            &.active {
+              opacity: 1;
+            }
+          }
+        }
+      }
+
+      .owl-nav {
+        .owl-prev, .owl-next {
+          position: absolute;
+          top: calc(50% - 7px);
+          border: 1px solid $primary-color;
+          border-radius: 50%;
+          height: 50px;
+          width: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          &:hover {
+            background-color: $primary-color;
+            outline: none;
+
+            .fa-chevron-left, .fa-chevron-right {
+              color: $font-color;
+            }
+          }
 
           .fa-chevron-left, .fa-chevron-right {
-            color: $font-color;
+            color: $primary-color;
+            height: 14px;
           }
         }
 
-        .fa-chevron-left, .fa-chevron-right {
-          color: $primary-color;
-          height: 14px;
+        .owl-prev {
+          left: -5%;
+        }
+
+        .owl-next {
+          right: -5%;
         }
       }
 
-      .owl-prev {
-        left: -5%;
-      }
+      .owl-dots {
+        margin-top: 1rem;
+        text-align: center;
 
-      .owl-next {
-        right: -5%;
-      }
-    }
+        .owl-dot {
+          background-color: $primary-color;
+          opacity: 0.3;
+          height: 10px;
+          width: 10px;
+          border-radius: 50%;
+          margin: 0 0.5rem;
 
-    .owl-dots {
-      margin-top: 1rem;
-      text-align: center;
+          &:focus {
+            outline: none;
+          }
 
-      .owl-dot {
-        background-color: $primary-color;
-        opacity: 0.3;
-        height: 10px;
-        width: 10px;
-        border-radius: 50%;
-        margin: 0 0.5rem;
-
-        &:focus {
-          outline: none;
-        }
-
-        &.active {
-          opacity: 1;
-        }
-      }
-    }
-  }
-}
-
-.vehicles {
-  .title {
-    margin-bottom: 4rem;
-  }
-
-  .vehicles-carousel {
-    font-family: HelveticaNeueCyr, sans-serif;
-
-    .owl-stage-outer {
-      .owl-item {
-        .vehicles-type {
-          opacity: 0.2;
-        }
-
-        .vehicles-type-brand, .vehicles-description {
-          display: none;
-        }
-
-        &.active {
-          .vehicles-type {
+          &.active {
             opacity: 1;
           }
-
-          .vehicles-type-brand {
-            display: block;
-            color: $main-color;
-            font-size: 1.5rem;
-            font-weight: bold;
-            @media (max-width: 520rem) {
-              font-size: 1.125rem;
-            }
-          }
-
-          .vehicles-description {
-            display: flex;
-
-            .properties {
-              border: 1px solid $secondary-color;
-              padding: 1rem;
-
-              .vehicles-property {
-                padding: 0 1rem;
-                border-right: 1px solid $secondary-color;
-                @media (min-width: 1200px) {
-                  padding: 0 2rem;
-                }
-
-                &:last-of-type {
-                  border: none;
-                }
-
-                .vehicles-property-title, .vehicles-property-text {
-                  margin-bottom: 0;
-                  font-size: 0.875rem;
-                }
-
-                .vehicles-property-title {
-                  opacity: 0.5;
-                }
-              }
-            }
-          }
         }
+      }
+    }
+  }
 
-        &.cloned {
+  .vehicles {
+    .title {
+      margin-bottom: 4rem;
+    }
+
+    .vehicles-carousel {
+      font-family: HelveticaNeueCyr, sans-serif;
+
+      .owl-stage-outer {
+        .owl-item {
           .vehicles-type {
-            opacity: 0.3;
+            opacity: 0.2;
           }
 
           .vehicles-type-brand, .vehicles-description {
             display: none;
           }
+
+          &.active {
+            .vehicles-type {
+              opacity: 1;
+            }
+
+            .vehicles-type-brand {
+              display: block;
+              color: $main-color;
+              font-size: 1.5rem;
+              font-weight: bold;
+              @media (max-width: 520rem) {
+                font-size: 1.125rem;
+              }
+            }
+
+            .vehicles-description {
+              display: flex;
+
+              .properties {
+                border: 1px solid $secondary-color;
+                padding: 1rem;
+
+                .vehicles-property {
+                  padding: 0 1rem;
+                  border-right: 1px solid $secondary-color;
+                  @media (min-width: 1200px) {
+                    padding: 0 2rem;
+                  }
+
+                  &:last-of-type {
+                    border: none;
+                  }
+
+                  .vehicles-property-title, .vehicles-property-text {
+                    margin-bottom: 0;
+                    font-size: 0.875rem;
+                  }
+
+                  .vehicles-property-title {
+                    opacity: 0.5;
+                  }
+                }
+              }
+            }
+          }
+
+          &.cloned {
+            .vehicles-type {
+              opacity: 0.3;
+            }
+
+            .vehicles-type-brand, .vehicles-description {
+              display: none;
+            }
+          }
+        }
+      }
+
+      .vehicles-type {
+        .vehicles-type-img {
+          max-width: 550px;
+          max-height: 220px;
+          display: block;
+          margin: auto;
+          margin-bottom: 8rem;
+        }
+      }
+
+      .owl-nav {
+        .owl-prev, .owl-next {
+          position: absolute;
+          top: 25%;
+          background-color: $font-color;
+          border-radius: 50%;
+          height: 50px;
+          width: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          &:active, &:focus {
+            outline: none;
+          }
+
+          .fa-chevron-left, .fa-chevron-right {
+            color: $primary-color;
+            height: 14px;
+          }
+        }
+
+        .owl-prev {
+          left: 5%;
+        }
+
+        .owl-next {
+          right: 5%;
+        }
+      }
+
+      .owl-dots {
+        margin-top: 1rem;
+        text-align: center;
+
+        .owl-dot {
+          background-color: $primary-color;
+          opacity: 0.3;
+          height: 10px;
+          width: 10px;
+          border-radius: 50%;
+          margin: 0 0.5rem;
+
+          &:focus {
+            outline: none;
+          }
+
+          &.active {
+            opacity: 1;
+          }
         }
       }
     }
+  }
 
-    .vehicles-type {
-      .vehicles-type-img {
-        max-width: 588px;
-        max-height: 330px;
+  .about {
+    background-color: #FAFAFF;
+
+    .subheader {
+      font-size: 1.5rem;
+      color: $main-color;
+      @media(max-width: 520px) {
+        font-size: 1.125rem;
       }
     }
 
-    .owl-nav {
-      .owl-prev, .owl-next {
-        position: absolute;
-        top: calc(40% - 24px);
-        background-color: $font-color;
-        border-radius: 50%;
-        height: 50px;
-        width: 50px;
+    .about-text {
+      font-size: 1.125rem;
+      color: $main-color;
+      font-weight: 300;
+      @media(max-width: 520px) {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .top-destinations {
+    .list-group {
+      margin-right: 1rem;
+
+      .list-group-item {
+        color: $main-color;
         display: flex;
-        justify-content: center;
+        flex-grow: 1;
         align-items: center;
-
-        &:active, &:focus {
-          outline: none;
+        padding: 0.5rem;
+        border: none;
+        @media (max-width: 768px) {
+          font-size: 0.6rem;
+        }
+        @media (min-width: 768px) and (max-width: 1024px) {
+          font-size: 0.6rem;
+        }
+        @media (min-width: 1024px) and (max-width: 1200px) {
+          font-size: 0.7rem;
         }
 
-        .fa-chevron-left, .fa-chevron-right {
-          color: $primary-color;
-          height: 14px;
+        .destination-icon, .home-icon {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          display: inline-block;
+          margin-right: 1rem;
+          @media (max-width: 768px) {
+            width: 40px;
+            height: 40px;
+            margin-right: 0.5rem;
+          }
+          @media (min-width: 768px) and (max-width: 1024px) {
+            width: 20px;
+            height: 20px;
+            margin-right: 0.5rem;
+          }
+          @media (min-width: 1024px) and (max-width: 1200px) {
+            width: 30px;
+            height: 30px;
+            margin-right: 0.5rem;
+          }
+
+          .icon-plane {
+            margin-top: 15px;
+            margin-left: 15px;
+            width: 20px;
+            height: 20px;
+            @media (max-width: 768px) {
+              margin-top: 12px;
+              margin-left: 8px;
+            }
+            @media (min-width: 768px) and (max-width: 1024px) {
+              width: 10px;
+              height: 10px;
+              margin-top: 5px;
+              margin-left: 5px;
+            }
+            @media(min-width: 1024px) and (max-width: 1200px) {
+              width: 15px;
+              height: 15px;
+              margin-top: 7px;
+              margin-left: 7px;
+            }
+          }
         }
-      }
 
-      .owl-prev {
-        left: 5%;
-      }
+        .destination-icon {
+          background-color: $primary-color;
 
-      .owl-next {
-        right: 5%;
+          &:hover {
+            background-color: #0082E6;
+          }
+        }
+
+        .home-icon {
+          border: 2px solid $primary-color;
+
+          &:hover {
+            background-color: $primary-color;
+          }
+
+          .icon-home {
+            height: 20px;
+            width: 18px;
+            margin-top: 13px;
+            margin-left: 14px;
+            @media (max-width: 768px) {
+              margin-top: 7px;
+              margin-left: 9px;
+            }
+            @media (min-width: 768px) and (max-width: 1024px) {
+              width: 10px;
+              height: 10px;
+              margin-top: 1px;
+              margin-left: 2.5px;
+            }
+            @media(min-width: 1024px) and (max-width: 1200px) {
+              width: 15px;
+              height: 15px;
+              margin-top: 5px;
+              margin-left: 6px;
+            }
+          }
+        }
       }
     }
 
     .owl-dots {
-      margin-top: 1rem;
+      margin-top: 1.25rem;
       text-align: center;
 
       .owl-dot {
@@ -730,180 +943,40 @@ header {
       }
     }
   }
-}
 
-.about {
-  background-color: #FAFAFF;
+  footer {
+    padding-top: 30px;
+    border-top: 1px solid #E6E6F1;
 
-  .subheader {
-    font-size: 1.5rem;
-    color: $main-color;
-    @media(max-width: 520px) {
-      font-size: 1.125rem;
+    .nav {
+      margin-bottom: 1.5rem;
+
+      .nav-item {
+        .nav-link {
+          color: $main-color;
+          font-weight: bold;
+          font-size: 0.875rem;
+          padding: 0 2rem;
+          @media (max-width: 1024px) {
+            padding: 0 1rem;
+          }
+
+          &:hover {
+            color: $primary-color;
+          }
+        }
+      }
     }
-  }
 
-  .about-text {
-    font-size: 1.125rem;
-    color: $main-color;
-    @media(max-width: 520px) {
-      font-size: 1rem;
+    .payment {
+      margin-bottom: 1.5rem;
     }
-  }
-}
 
-.top-destinations {
-  .list-group {
-    margin-right: 1rem;
-
-    .list-group-item {
+    .footer-text {
       color: $main-color;
-      display: flex;
-      flex-grow: 1;
-      align-items: center;
-      padding: 0.5rem;
-      border: none;
-      @media (max-width: 768px) {
-        font-size: 0.7rem;
-      }
-      @media (min-width: 768px) and (max-width: 1024px) {
-        font-size: 0.6rem;
-      }
-      @media (min-width: 1024px) and (max-width: 1200px) {
-        font-size: 0.7rem;
-      }
-
-      .destination-icon, .home-icon {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        display: inline-block;
-        margin-right: 1rem;
-        @media (max-width: 768px) {
-          width: 30px;
-          height: 30px;
-          margin-right: 0.5rem;
-        }
-        @media (min-width: 768px) and (max-width: 1024px) {
-          width: 20px;
-          height: 20px;
-          margin-right: 0.5rem;
-        }
-        @media (min-width: 1024px) and (max-width: 1200px) {
-          width: 30px;
-          height: 30px;
-          margin-right: 0.5rem;
-        }
-
-        .icon-plane {
-          margin-top: 15px;
-          margin-left: 15px;
-          width: 20px;
-          height: 20px;
-          @media (max-width: 768px) {
-            width: 15px;
-            height: 15px;
-            margin-top: 7px;
-            margin-left: 7px;
-          }
-          @media (min-width: 768px) and (max-width: 1024px) {
-            width: 10px;
-            height: 10px;
-            margin-top: 5px;
-            margin-left: 5px;
-          }
-          @media(min-width: 1024px) and (max-width: 1200px) {
-            width: 15px;
-            height: 15px;
-            margin-top: 7px;
-            margin-left: 7px;
-          }
-        }
-      }
-
-      .destination-icon {
-        background-color: $primary-color;
-      }
-
-      .home-icon {
-        border: 1px solid $primary-color;
-
-        .icon-home {
-          height: 20px;
-          width: 18px;
-          margin-top: 14px;
-          margin-left: 15px;
-          @media (max-width: 768px) {
-            width: 15px;
-            height: 15px;
-            margin-top: 5px;
-            margin-left: 7px;
-          }
-          @media (min-width: 768px) and (max-width: 1024px) {
-            width: 10px;
-            height: 10px;
-            margin-top: 3px;
-            margin-left: 4px;
-          }
-          @media(min-width: 1024px) and (max-width: 1200px) {
-            width: 15px;
-            height: 15px;
-            margin-top: 5px;
-            margin-left: 7px;
-          }
-        }
-      }
-    }
-  }
-
-  .owl-dots {
-    margin-top: 1rem;
-    text-align: center;
-
-    .owl-dot {
-      background-color: $primary-color;
       opacity: 0.3;
-      height: 10px;
-      width: 10px;
-      border-radius: 50%;
-      margin: 0 0.5rem;
-
-      &:focus {
-        outline: none;
-      }
-
-      &.active {
-        opacity: 1;
-      }
+      font-size: 0.875rem;
+      margin-bottom: 0.5rem;
     }
-  }
-}
-
-footer {
-  .nav {
-    margin-bottom: 1.5rem;
-
-    .nav-item {
-      .nav-link {
-        color: $main-color;
-        font-weight: bold;
-        font-size: 0.875rem;
-        padding: 0 2rem;
-        @media (max-width: 1024px) {
-          padding: 0 1rem;
-        }
-      }
-    }
-  }
-
-  .payment {
-    margin-bottom: 1.5rem;
-  }
-
-  .footer-text {
-    color: $main-color;
-    opacity: 0.3;
-    font-size: 0.875rem;
-    margin-bottom: 0.5rem;
   }
 }

@@ -24,7 +24,7 @@ $(document).ready(function () {
                 nav: false,
                 dots: true
             },
-            720: {
+           768: {
                 items: 2,
                 nav: false,
                 dots: true
@@ -48,17 +48,23 @@ $(document).ready(function () {
             },
             768: {
                 items: 1,
-                stagePadding: 150,
+                stagePadding: 100,
                 nav: false,
                 dots: true
             },
             990: {
                 items: 1,
-                stagePadding: 200,
+                stagePadding: 250,
                 nav: true,
                 dots: false
             },
             1200: {
+                items: 1,
+                nav: true,
+                dots: false,
+                stagePadding: 330
+            },
+            1440: {
                 items: 1,
                 nav: true,
                 dots: false,
