@@ -57,6 +57,9 @@ html {
             color: $font-color;
             font-weight: 600;
             font-size: 1rem;
+            @media (max-width: 768px) {
+              font-size: 1.5rem;
+            }
 
             &:hover {
               color: $primary-color;

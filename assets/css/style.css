@@ -52,6 +52,11 @@ html header .navbar .navbar-nav .nav-item .nav-link {
   font-weight: 600;
   font-size: 1rem;
 }
+@media (max-width: 768px) {
+  html header .navbar .navbar-nav .nav-item .nav-link {
+    font-size: 1.5rem;
+  }
+}
 html header .navbar .navbar-nav .nav-item .nav-link:hover {
   color: #0091FF;
 }
