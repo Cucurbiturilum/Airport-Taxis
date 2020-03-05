@@ -3,13 +3,120 @@ $main-color: #0A1E2D;
 $secondary-color: #F3F3F3;
 $primary-color: #0091FF;
 
-@import "stylesheet.css";
+@font-face {
+  font-family: 'HelveticaNeueCyr';
+  src: url('../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Medium.eot');
+  src: local('HelveticaNeueCyr-Medium'),
+  url('../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Medium.woff') format('woff'),
+  url('../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCyr';
+  src: url('../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Heavy.eot');
+  src: local('HelveticaNeueCyr-Heavy'),
+  url('../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Heavy.eot?#iefix') format('embedded-opentype'),
+  url('../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Heavy.woff') format('woff'),
+  url('../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Heavy.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCyr';
+  src: url('../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-HeavyItalic.eot');
+  src: local('HelveticaNeueCyr-HeavyItalic'),
+  url('../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-HeavyItalic.eot?#iefix') format('embedded-opentype'),
+  url('../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-HeavyItalic.woff') format('woff'),
+  url('../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-HeavyItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCyr';
+  src: url('../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Black.eot');
+  src: local('HelveticaNeueCyr-Black'),
+  url('../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Black.eot?#iefix') format('embedded-opentype'),
+  url('../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Black.woff') format('woff'),
+  url('../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCyr';
+  src: url('../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-UltraLight.eot');
+  src: local('HelveticaNeueCyr-UltraLight'),
+  url('../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-UltraLight.eot?#iefix') format('embedded-opentype'),
+  url('../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-UltraLight.woff') format('woff'),
+  url('../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-UltraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCyr';
+  src: url('../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Roman.eot');
+  src: local('HelveticaNeueCyr-Roman'),
+  url('../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Roman.eot?#iefix') format('embedded-opentype'),
+  url('../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Roman.woff') format('woff'),
+  url('../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Roman.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCyr';
+  src: url('../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Bold.eot');
+  src: local('HelveticaNeueCyr-Bold'),
+  url('../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Bold.woff') format('woff'),
+  url('../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCyr';
+  src: url('../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Light.eot');
+  src: local('HelveticaNeueCyr-Light'),
+  url('../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Light.eot?#iefix') format('embedded-opentype'),
+  url('../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Light.woff') format('woff'),
+  url('../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCyr';
+  src: url('../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Thin.eot');
+  src: local('HelveticaNeueCyr-Thin'),
+  url('../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Thin.eot?#iefix') format('embedded-opentype'),
+  url('../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Thin.woff') format('woff'),
+  url('../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 html {
   scroll-behavior: smooth;
 
   header {
-    background-image: url(../../assets/img/background.png);
+    background-image: url(../../assets/img/background.webp);
     background-size: cover;
     font-family: HelveticaNeueCyr, sans-serif;
     padding-bottom: 5rem;
@@ -39,6 +146,10 @@ html {
 
       .navbar-toggler {
         z-index: 2;
+
+        &:focus {
+          outline: none;
+        }
 
         .navbar-toggler-icon {
           width: 1.3rem;
@@ -421,6 +532,9 @@ html {
 
   .price {
     padding-bottom: 7rem;
+    .no-gutters{
+      padding: 0 0.1px 0.1px 0;
+    }
 
     .card {
       border: 2px solid $primary-color;
@@ -429,11 +543,12 @@ html {
       margin: 15px;
 
       &:hover {
-        .info{
-          .car-price{
+        .info {
+          .car-price {
             .card-text {
               display: none;
             }
+
             .card-title {
               display: none;
 
@@ -514,10 +629,6 @@ html {
           }
         }
       }
-
-      .info {
-        margin: 0 0 .35px 0;
-      }
     }
 
     .carousel {
@@ -542,6 +653,14 @@ html {
 
   .review {
     background-color: #FAFAFF;
+    .container{
+      @media (width:667px) {
+        max-width: 660px!important;
+      }
+      @media (width:736px) {
+        max-width: 730px!important;
+      }
+    }
 
     .card-deck {
       .card {
@@ -549,8 +668,22 @@ html {
         border: none;
         border-radius: 0;
         padding: 1.875rem;
-        @media (max-width: 520px) {
-          padding: 1.2rem;
+        @media (max-width: 375px) {
+          padding: 30px;
+          height:  470px;
+          font-size: 18px;
+        }
+        @media (min-width: 400px) and (max-width: 660px) {
+          height:  410px;
+          padding: 30px;
+        }
+        @media (min-width: 660px) and (max-width: 730px) {
+        height:  570px;
+        padding: 30px;
+      }
+        @media (min-width: 1024px) and (max-width: 1200px) {
+          height:  400px;
+          padding: 30px;
         }
 
         .card-body {
@@ -622,6 +755,10 @@ html {
             .fa-chevron-left, .fa-chevron-right {
               color: $font-color;
             }
+          }
+
+          &:focus {
+            outline: none;
           }
 
           .fa-chevron-left, .fa-chevron-right {
@@ -735,6 +872,51 @@ html {
             .vehicles-type-brand, .vehicles-description {
               display: none;
             }
+            &.active{
+              .vehicles-type {
+                opacity: 1;
+              }
+
+              .vehicles-type-brand {
+                display: block;
+                color: $main-color;
+                font-size: 1.5rem;
+                font-weight: bold;
+                @media (max-width: 520rem) {
+                  font-size: 1.125rem;
+                }
+              }
+
+              .vehicles-description {
+                display: flex;
+
+                .properties {
+                  border: 1px solid $secondary-color;
+                  padding: 1rem;
+
+                  .vehicles-property {
+                    padding: 0 1rem;
+                    border-right: 1px solid $secondary-color;
+                    @media (min-width: 1200px) {
+                      padding: 0 2rem;
+                    }
+
+                    &:last-of-type {
+                      border: none;
+                    }
+
+                    .vehicles-property-title, .vehicles-property-text {
+                      margin-bottom: 0;
+                      font-size: 0.875rem;
+                    }
+
+                    .vehicles-property-title {
+                      opacity: 0.5;
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -746,6 +928,9 @@ html {
           display: block;
           margin: auto;
           margin-bottom: 8rem;
+          @media (max-width: 520px) {
+            margin-bottom: 5.5rem;
+          }
         }
       }
 
@@ -763,6 +948,15 @@ html {
 
           &:active, &:focus {
             outline: none;
+          }
+
+          &:hover {
+            background-color: $primary-color;
+            outline: none;
+
+            .fa-chevron-left, .fa-chevron-right {
+              color: $font-color;
+            }
           }
 
           .fa-chevron-left, .fa-chevron-right {
@@ -836,6 +1030,8 @@ html {
         align-items: center;
         padding: 0.5rem;
         border: none;
+        cursor: pointer;
+
         @media (max-width: 768px) {
           font-size: 0.6rem;
         }
@@ -846,7 +1042,7 @@ html {
           font-size: 0.7rem;
         }
 
-        .destination-icon, .home-icon {
+        .destination-icon, .home-icon, .home-icon-hover {
           width: 50px;
           height: 50px;
           border-radius: 50%;
@@ -894,18 +1090,10 @@ html {
 
         .destination-icon {
           background-color: $primary-color;
-
-          &:hover {
-            background-color: #0082E6;
-          }
         }
 
-        .home-icon {
+        .home-icon, .home-icon-hover {
           border: 2px solid $primary-color;
-
-          &:hover {
-            background-color: $primary-color;
-          }
 
           .icon-home {
             height: 20px;
@@ -930,6 +1118,28 @@ html {
             }
           }
         }
+
+        .home-icon-hover {
+          background-color: $primary-color;
+          display: none;
+        }
+
+        &:hover {
+          color: $primary-color;
+
+          .destination-icon {
+            background-color: #0082E6;
+          }
+
+          .home-icon {
+            display: none;
+          }
+
+          .home-icon-hover {
+            display: inline-block;
+          }
+        }
+
       }
     }
 
@@ -957,8 +1167,11 @@ html {
   }
 
   footer {
-    padding-top: 30px;
+    padding-top: 50px;
     border-top: 1px solid #E6E6F1;
+    @media (max-width: 520px) {
+      padding-top: 40px;
+    }
 
     .nav {
       margin-bottom: 1.5rem;

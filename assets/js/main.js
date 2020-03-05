@@ -24,7 +24,13 @@ $(document).ready(function () {
                 nav: false,
                 dots: true
             },
-           768: {
+            660: {
+                items: 2,
+                nav: false,
+                dots: true,
+                margin: 0
+            },
+            1024: {
                 items: 2,
                 nav: false,
                 dots: true
@@ -39,6 +45,8 @@ $(document).ready(function () {
     });
     $('.vehicles-carousel').owlCarousel({
         loop: true,
+        rewind: true,
+        startPosition: 1,
         navText: ['<span aria-label="Previous"><i class="fas fa-chevron-left"></i></span>', '<span aria-label="Next"><i class="fas fa-chevron-right"></i></span>'],
         responsive: {
             0: {
@@ -80,9 +88,9 @@ $(document).ready(function () {
 });
 
 const nav = document.getElementById('main-nav'),
-      burger = document.getElementById('burger');
+    burger = document.getElementById('burger');
 
-burger.addEventListener('click', function(){
+burger.addEventListener('click', function () {
     nav.classList.toggle('is-open');
 });
 

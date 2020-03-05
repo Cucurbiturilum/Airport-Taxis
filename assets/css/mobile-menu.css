@@ -1,4 +1,3 @@
-/* Main menu positionning */
 #burger {
   z-index: 1000;
 }
@@ -24,7 +23,6 @@
   visibility: visible;
 }
 
-/* Yellow band effect */
 .main-nav::before {
   content: "";
   position: absolute;
@@ -32,7 +30,7 @@
   bottom: 0;
   left: 0;
   right: -15px;
-  background: #FEDC2A;
+  background: #0091ff;
   transform-origin: 0 0;
   transform: skew(-14deg) translateX(-120%);
   transition: all 1.5s 0.1s;
@@ -42,12 +40,10 @@
   transform: skew(-14deg) translateX(0);
 }
 
-/* Skewing effect on menu links */
 .main-nav ul {
   display: inline-flex;
   flex-direction: column;
   height: 93%;
-  /* Should be 100%, but we have a notice message :D */
   align-items: flex-end;
   justify-content: center;
   transform: translateX(-18%) skew(-16deg);
@@ -60,7 +56,6 @@
   transform: skew(16deg);
 }
 
-/* Apparition effect on links */
 .main-nav a {
   opacity: 0;
   transform: translateY(-10px);
@@ -83,9 +78,7 @@
   transition: all 675ms 675ms;
 }
 
-/* Decoration */
-.main-nav ul,
-.main-nav li {
+.main-nav ul, .main-nav li {
   list-style: none;
   padding: 0;
 }
@@ -93,26 +86,25 @@
 .main-nav a {
   display: block;
   padding: 12px 0;
-  color: #5A3B5D;
+  color: #5a3b5d;
   font-size: 1.4em;
   text-decoration: none;
   font-weight: bold;
 }
 
-/* Burger Style: @see: https://codepen.io/CreativeJuiz/full/oMZNXy */
 .open-main-nav {
   position: absolute;
   top: 15px;
   padding-top: 20px;
   right: 15px;
   z-index: 1000;
-  background: none;
+  background: 0;
   border: 0;
   cursor: pointer;
 }
 
 .open-main-nav:focus {
-  outline: none;
+  outline: 0;
 }
 
 .burger {
@@ -121,17 +113,16 @@
   width: 28px;
   height: 4px;
   margin: 0 auto;
-  background: #5A3B5D;
+  background: #5a3b5d;
   transform: skew(5deg);
   transition: all 0.275s;
 }
 
-.burger:after,
-.burger:before {
+.burger:after, .burger:before {
   content: "";
   display: block;
   height: 100%;
-  background: #5A3B5D;
+  background: #5a3b5d;
   transition: all 0.275s;
 }
 
@@ -143,13 +134,12 @@
   transform: translateY(-16px) skew(-10deg);
 }
 
-/* Toggle State part */
 .is-open .burger {
   transform: skew(5deg) translateY(-8px) rotate(-45deg);
 }
 
 .is-open .burger:before {
-  transform: translateY(0px) skew(-10deg) rotate(75deg);
+  transform: translateY(0) skew(-10deg) rotate(75deg);
 }
 
 .is-open .burger:after {
@@ -157,7 +147,6 @@
   opacity: 0;
 }
 
-/* MENU Text part */
 .burger-text {
   display: block;
   font-size: 0.675rem;
@@ -166,33 +155,7 @@
   text-transform: uppercase;
   font-weight: 500;
   text-align: center;
-  color: #5A3B5D;
-}
-
-/* Notice */
-.notice {
-  position: absolute;
-  bottom: -15px;
-  left: 0;
-  right: 0;
-  padding: 20px;
-  background: #F2F2F2;
-  color: #5A3B5D;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.5;
-  z-index: 100;
-  text-align: center;
-}
-
-.notice strong {
-  font-weight: 700;
-}
-
-.notice a {
-  padding: 2px 3px;
-  background: #FEDC2A;
-  text-decoration: none;
+  color: #5a3b5d;
 }
 
 /*# sourceMappingURL=mobile-menu.css.map */

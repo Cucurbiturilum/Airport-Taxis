@@ -1,9 +1,80 @@
-@import "stylesheet.css";
+@font-face {
+  font-family: "HelveticaNeueCyr";
+  src: url("../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Medium.eot");
+  src: local("HelveticaNeueCyr-Medium"), url("../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Medium.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Medium.woff") format("woff"), url("../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HelveticaNeueCyr";
+  src: url("../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Heavy.eot");
+  src: local("HelveticaNeueCyr-Heavy"), url("../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Heavy.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Heavy.woff") format("woff"), url("../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Heavy.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HelveticaNeueCyr";
+  src: url("../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-HeavyItalic.eot");
+  src: local("HelveticaNeueCyr-HeavyItalic"), url("../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-HeavyItalic.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-HeavyItalic.woff") format("woff"), url("../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-HeavyItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HelveticaNeueCyr";
+  src: url("../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Black.eot");
+  src: local("HelveticaNeueCyr-Black"), url("../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Black.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Black.woff") format("woff"), url("../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HelveticaNeueCyr";
+  src: url("../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-UltraLight.eot");
+  src: local("HelveticaNeueCyr-UltraLight"), url("../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-UltraLight.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-UltraLight.woff") format("woff"), url("../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-UltraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HelveticaNeueCyr";
+  src: url("../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Roman.eot");
+  src: local("HelveticaNeueCyr-Roman"), url("../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Roman.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Roman.woff") format("woff"), url("../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Roman.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HelveticaNeueCyr";
+  src: url("../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Bold.eot");
+  src: local("HelveticaNeueCyr-Bold"), url("../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Bold.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Bold.woff") format("woff"), url("../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HelveticaNeueCyr";
+  src: url("../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Light.eot");
+  src: local("HelveticaNeueCyr-Light"), url("../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Light.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Light.woff") format("woff"), url("../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HelveticaNeueCyr";
+  src: url("../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Thin.eot");
+  src: local("HelveticaNeueCyr-Thin"), url("../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Thin.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Thin.woff") format("woff"), url("../../assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
 html {
   scroll-behavior: smooth;
 }
 html header {
-  background-image: url(../../assets/img/background.png);
+  background-image: url(../../assets/img/background.webp);
   background-size: cover;
   font-family: HelveticaNeueCyr, sans-serif;
   padding-bottom: 5rem;
@@ -39,6 +110,9 @@ html header .navbar .navbar-brand .brand-logo {
 }
 html header .navbar .navbar-toggler {
   z-index: 2;
+}
+html header .navbar .navbar-toggler:focus {
+  outline: none;
 }
 html header .navbar .navbar-toggler .navbar-toggler-icon {
   width: 1.3rem;
@@ -397,6 +471,9 @@ html .btn-primary:hover {
 html .price {
   padding-bottom: 7rem;
 }
+html .price .no-gutters {
+  padding: 0 0.1px 0.1px 0;
+}
 html .price .card {
   border: 2px solid #0091FF;
   border-radius: 0;
@@ -472,9 +549,6 @@ html .price .card .card-body.car-price .card-title {
 html .price .card .card-body.car-price .card-title.book {
   display: none;
 }
-html .price .card .info {
-  margin: 0 0 0.35px 0;
-}
 html .price .carousel .carousel-indicators {
   bottom: -5rem;
 }
@@ -492,15 +566,45 @@ html .price .carousel .carousel-indicators .carouselIndicators.active {
 html .review {
   background-color: #FAFAFF;
 }
+@media (width: 667px) {
+  html .review .container {
+    max-width: 660px !important;
+  }
+}
+@media (width: 736px) {
+  html .review .container {
+    max-width: 730px !important;
+  }
+}
 html .review .card-deck .card {
   height: 500px;
   border: none;
   border-radius: 0;
   padding: 1.875rem;
 }
-@media (max-width: 520px) {
+@media (max-width: 375px) {
   html .review .card-deck .card {
-    padding: 1.2rem;
+    padding: 30px;
+    height: 470px;
+    font-size: 18px;
+  }
+}
+@media (min-width: 400px) and (max-width: 660px) {
+  html .review .card-deck .card {
+    height: 410px;
+    padding: 30px;
+  }
+}
+@media (min-width: 660px) and (max-width: 730px) {
+  html .review .card-deck .card {
+    height: 570px;
+    padding: 30px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  html .review .card-deck .card {
+    height: 400px;
+    padding: 30px;
   }
 }
 html .review .card-deck .card .card-body {
@@ -560,6 +664,9 @@ html .review .card-deck .owl-nav .owl-prev:hover, html .review .card-deck .owl-n
 }
 html .review .card-deck .owl-nav .owl-prev:hover .fa-chevron-left, html .review .card-deck .owl-nav .owl-prev:hover .fa-chevron-right, html .review .card-deck .owl-nav .owl-next:hover .fa-chevron-left, html .review .card-deck .owl-nav .owl-next:hover .fa-chevron-right {
   color: #ffffff;
+}
+html .review .card-deck .owl-nav .owl-prev:focus, html .review .card-deck .owl-nav .owl-next:focus {
+  outline: none;
 }
 html .review .card-deck .owl-nav .owl-prev .fa-chevron-left, html .review .card-deck .owl-nav .owl-prev .fa-chevron-right, html .review .card-deck .owl-nav .owl-next .fa-chevron-left, html .review .card-deck .owl-nav .owl-next .fa-chevron-right {
   color: #0091FF;
@@ -647,12 +754,57 @@ html .vehicles .vehicles-carousel .owl-stage-outer .owl-item.cloned .vehicles-ty
 html .vehicles .vehicles-carousel .owl-stage-outer .owl-item.cloned .vehicles-type-brand, html .vehicles .vehicles-carousel .owl-stage-outer .owl-item.cloned .vehicles-description {
   display: none;
 }
+html .vehicles .vehicles-carousel .owl-stage-outer .owl-item.cloned.active .vehicles-type {
+  opacity: 1;
+}
+html .vehicles .vehicles-carousel .owl-stage-outer .owl-item.cloned.active .vehicles-type-brand {
+  display: block;
+  color: #0A1E2D;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+@media (max-width: 520rem) {
+  html .vehicles .vehicles-carousel .owl-stage-outer .owl-item.cloned.active .vehicles-type-brand {
+    font-size: 1.125rem;
+  }
+}
+html .vehicles .vehicles-carousel .owl-stage-outer .owl-item.cloned.active .vehicles-description {
+  display: flex;
+}
+html .vehicles .vehicles-carousel .owl-stage-outer .owl-item.cloned.active .vehicles-description .properties {
+  border: 1px solid #F3F3F3;
+  padding: 1rem;
+}
+html .vehicles .vehicles-carousel .owl-stage-outer .owl-item.cloned.active .vehicles-description .properties .vehicles-property {
+  padding: 0 1rem;
+  border-right: 1px solid #F3F3F3;
+}
+@media (min-width: 1200px) {
+  html .vehicles .vehicles-carousel .owl-stage-outer .owl-item.cloned.active .vehicles-description .properties .vehicles-property {
+    padding: 0 2rem;
+  }
+}
+html .vehicles .vehicles-carousel .owl-stage-outer .owl-item.cloned.active .vehicles-description .properties .vehicles-property:last-of-type {
+  border: none;
+}
+html .vehicles .vehicles-carousel .owl-stage-outer .owl-item.cloned.active .vehicles-description .properties .vehicles-property .vehicles-property-title, html .vehicles .vehicles-carousel .owl-stage-outer .owl-item.cloned.active .vehicles-description .properties .vehicles-property .vehicles-property-text {
+  margin-bottom: 0;
+  font-size: 0.875rem;
+}
+html .vehicles .vehicles-carousel .owl-stage-outer .owl-item.cloned.active .vehicles-description .properties .vehicles-property .vehicles-property-title {
+  opacity: 0.5;
+}
 html .vehicles .vehicles-carousel .vehicles-type .vehicles-type-img {
   max-width: 550px;
   max-height: 220px;
   display: block;
   margin: auto;
   margin-bottom: 8rem;
+}
+@media (max-width: 520px) {
+  html .vehicles .vehicles-carousel .vehicles-type .vehicles-type-img {
+    margin-bottom: 5.5rem;
+  }
 }
 html .vehicles .vehicles-carousel .owl-nav .owl-prev, html .vehicles .vehicles-carousel .owl-nav .owl-next {
   position: absolute;
@@ -667,6 +819,13 @@ html .vehicles .vehicles-carousel .owl-nav .owl-prev, html .vehicles .vehicles-c
 }
 html .vehicles .vehicles-carousel .owl-nav .owl-prev:active, html .vehicles .vehicles-carousel .owl-nav .owl-prev:focus, html .vehicles .vehicles-carousel .owl-nav .owl-next:active, html .vehicles .vehicles-carousel .owl-nav .owl-next:focus {
   outline: none;
+}
+html .vehicles .vehicles-carousel .owl-nav .owl-prev:hover, html .vehicles .vehicles-carousel .owl-nav .owl-next:hover {
+  background-color: #0091FF;
+  outline: none;
+}
+html .vehicles .vehicles-carousel .owl-nav .owl-prev:hover .fa-chevron-left, html .vehicles .vehicles-carousel .owl-nav .owl-prev:hover .fa-chevron-right, html .vehicles .vehicles-carousel .owl-nav .owl-next:hover .fa-chevron-left, html .vehicles .vehicles-carousel .owl-nav .owl-next:hover .fa-chevron-right {
+  color: #ffffff;
 }
 html .vehicles .vehicles-carousel .owl-nav .owl-prev .fa-chevron-left, html .vehicles .vehicles-carousel .owl-nav .owl-prev .fa-chevron-right, html .vehicles .vehicles-carousel .owl-nav .owl-next .fa-chevron-left, html .vehicles .vehicles-carousel .owl-nav .owl-next .fa-chevron-right {
   color: #0091FF;
@@ -728,6 +887,7 @@ html .top-destinations .list-group .list-group-item {
   align-items: center;
   padding: 0.5rem;
   border: none;
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   html .top-destinations .list-group .list-group-item {
@@ -744,7 +904,7 @@ html .top-destinations .list-group .list-group-item {
     font-size: 0.7rem;
   }
 }
-html .top-destinations .list-group .list-group-item .destination-icon, html .top-destinations .list-group .list-group-item .home-icon {
+html .top-destinations .list-group .list-group-item .destination-icon, html .top-destinations .list-group .list-group-item .home-icon, html .top-destinations .list-group .list-group-item .home-icon-hover {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -752,40 +912,40 @@ html .top-destinations .list-group .list-group-item .destination-icon, html .top
   margin-right: 1rem;
 }
 @media (max-width: 768px) {
-  html .top-destinations .list-group .list-group-item .destination-icon, html .top-destinations .list-group .list-group-item .home-icon {
+  html .top-destinations .list-group .list-group-item .destination-icon, html .top-destinations .list-group .list-group-item .home-icon, html .top-destinations .list-group .list-group-item .home-icon-hover {
     width: 40px;
     height: 40px;
     margin-right: 0.5rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  html .top-destinations .list-group .list-group-item .destination-icon, html .top-destinations .list-group .list-group-item .home-icon {
+  html .top-destinations .list-group .list-group-item .destination-icon, html .top-destinations .list-group .list-group-item .home-icon, html .top-destinations .list-group .list-group-item .home-icon-hover {
     width: 20px;
     height: 20px;
     margin-right: 0.5rem;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
-  html .top-destinations .list-group .list-group-item .destination-icon, html .top-destinations .list-group .list-group-item .home-icon {
+  html .top-destinations .list-group .list-group-item .destination-icon, html .top-destinations .list-group .list-group-item .home-icon, html .top-destinations .list-group .list-group-item .home-icon-hover {
     width: 30px;
     height: 30px;
     margin-right: 0.5rem;
   }
 }
-html .top-destinations .list-group .list-group-item .destination-icon .icon-plane, html .top-destinations .list-group .list-group-item .home-icon .icon-plane {
+html .top-destinations .list-group .list-group-item .destination-icon .icon-plane, html .top-destinations .list-group .list-group-item .home-icon .icon-plane, html .top-destinations .list-group .list-group-item .home-icon-hover .icon-plane {
   margin-top: 15px;
   margin-left: 15px;
   width: 20px;
   height: 20px;
 }
 @media (max-width: 768px) {
-  html .top-destinations .list-group .list-group-item .destination-icon .icon-plane, html .top-destinations .list-group .list-group-item .home-icon .icon-plane {
+  html .top-destinations .list-group .list-group-item .destination-icon .icon-plane, html .top-destinations .list-group .list-group-item .home-icon .icon-plane, html .top-destinations .list-group .list-group-item .home-icon-hover .icon-plane {
     margin-top: 12px;
     margin-left: 8px;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  html .top-destinations .list-group .list-group-item .destination-icon .icon-plane, html .top-destinations .list-group .list-group-item .home-icon .icon-plane {
+  html .top-destinations .list-group .list-group-item .destination-icon .icon-plane, html .top-destinations .list-group .list-group-item .home-icon .icon-plane, html .top-destinations .list-group .list-group-item .home-icon-hover .icon-plane {
     width: 10px;
     height: 10px;
     margin-top: 5px;
@@ -793,7 +953,7 @@ html .top-destinations .list-group .list-group-item .destination-icon .icon-plan
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
-  html .top-destinations .list-group .list-group-item .destination-icon .icon-plane, html .top-destinations .list-group .list-group-item .home-icon .icon-plane {
+  html .top-destinations .list-group .list-group-item .destination-icon .icon-plane, html .top-destinations .list-group .list-group-item .home-icon .icon-plane, html .top-destinations .list-group .list-group-item .home-icon-hover .icon-plane {
     width: 15px;
     height: 15px;
     margin-top: 7px;
@@ -803,29 +963,23 @@ html .top-destinations .list-group .list-group-item .destination-icon .icon-plan
 html .top-destinations .list-group .list-group-item .destination-icon {
   background-color: #0091FF;
 }
-html .top-destinations .list-group .list-group-item .destination-icon:hover {
-  background-color: #0082E6;
-}
-html .top-destinations .list-group .list-group-item .home-icon {
+html .top-destinations .list-group .list-group-item .home-icon, html .top-destinations .list-group .list-group-item .home-icon-hover {
   border: 2px solid #0091FF;
 }
-html .top-destinations .list-group .list-group-item .home-icon:hover {
-  background-color: #0091FF;
-}
-html .top-destinations .list-group .list-group-item .home-icon .icon-home {
+html .top-destinations .list-group .list-group-item .home-icon .icon-home, html .top-destinations .list-group .list-group-item .home-icon-hover .icon-home {
   height: 20px;
   width: 18px;
   margin-top: 13px;
   margin-left: 14px;
 }
 @media (max-width: 768px) {
-  html .top-destinations .list-group .list-group-item .home-icon .icon-home {
+  html .top-destinations .list-group .list-group-item .home-icon .icon-home, html .top-destinations .list-group .list-group-item .home-icon-hover .icon-home {
     margin-top: 7px;
     margin-left: 9px;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  html .top-destinations .list-group .list-group-item .home-icon .icon-home {
+  html .top-destinations .list-group .list-group-item .home-icon .icon-home, html .top-destinations .list-group .list-group-item .home-icon-hover .icon-home {
     width: 10px;
     height: 10px;
     margin-top: 1px;
@@ -833,12 +987,28 @@ html .top-destinations .list-group .list-group-item .home-icon .icon-home {
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
-  html .top-destinations .list-group .list-group-item .home-icon .icon-home {
+  html .top-destinations .list-group .list-group-item .home-icon .icon-home, html .top-destinations .list-group .list-group-item .home-icon-hover .icon-home {
     width: 15px;
     height: 15px;
     margin-top: 5px;
     margin-left: 6px;
   }
+}
+html .top-destinations .list-group .list-group-item .home-icon-hover {
+  background-color: #0091FF;
+  display: none;
+}
+html .top-destinations .list-group .list-group-item:hover {
+  color: #0091FF;
+}
+html .top-destinations .list-group .list-group-item:hover .destination-icon {
+  background-color: #0082E6;
+}
+html .top-destinations .list-group .list-group-item:hover .home-icon {
+  display: none;
+}
+html .top-destinations .list-group .list-group-item:hover .home-icon-hover {
+  display: inline-block;
 }
 html .top-destinations .owl-dots {
   margin-top: 1.25rem;
@@ -859,8 +1029,13 @@ html .top-destinations .owl-dots .owl-dot.active {
   opacity: 1;
 }
 html footer {
-  padding-top: 30px;
+  padding-top: 50px;
   border-top: 1px solid #E6E6F1;
+}
+@media (max-width: 520px) {
+  html footer {
+    padding-top: 40px;
+  }
 }
 html footer .nav {
   margin-bottom: 1.5rem;
