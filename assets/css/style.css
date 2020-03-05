@@ -472,6 +472,9 @@ html .price .card .card-body.car-price:hover .card-title.book {
   font-size: 1.125rem;
   padding: 0;
 }
+html .price .card .info {
+  margin: 0 0 0.35px 0;
+}
 html .price .carousel .carousel-indicators {
   bottom: -5rem;
 }
