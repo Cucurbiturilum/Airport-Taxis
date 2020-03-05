@@ -403,6 +403,17 @@ html .price .card {
   box-shadow: 0 10px 15px 0 rgba(0, 145, 255, 0.1);
   margin: 15px;
 }
+html .price .card:hover .info .car-price .card-text {
+  display: none;
+}
+html .price .card:hover .info .car-price .card-title {
+  display: none;
+}
+html .price .card:hover .info .car-price .card-title.book {
+  display: block;
+  font-size: 1.125rem;
+  padding: 0;
+}
 html .price .card .car-make .media {
   align-items: center;
   margin-bottom: 1.8rem;
@@ -460,17 +471,6 @@ html .price .card .card-body.car-price .card-title {
 }
 html .price .card .card-body.car-price .card-title.book {
   display: none;
-}
-html .price .card .card-body.car-price:hover .card-text {
-  display: none;
-}
-html .price .card .card-body.car-price:hover .card-title {
-  display: none;
-}
-html .price .card .card-body.car-price:hover .card-title.book {
-  display: block;
-  font-size: 1.125rem;
-  padding: 0;
 }
 html .price .card .info {
   margin: 0 0 0.35px 0;

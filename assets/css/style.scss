@@ -39,6 +39,7 @@ html {
 
       .navbar-toggler {
         z-index: 2;
+
         .navbar-toggler-icon {
           width: 1.3rem;
           height: 1.3rem;
@@ -427,6 +428,26 @@ html {
       box-shadow: 0 10px 15px 0 rgba(0, 145, 255, 0.1);
       margin: 15px;
 
+      &:hover {
+        .info{
+          .car-price{
+            .card-text {
+              display: none;
+            }
+            .card-title {
+              display: none;
+
+              &.book {
+                display: block;
+                font-size: 1.125rem;
+                padding: 0;
+              }
+            }
+          }
+
+        }
+      }
+
       .car-make {
 
         .media {
@@ -491,26 +512,10 @@ html {
               display: none;
             }
           }
-
-          &:hover {
-            .card-text {
-              display: none;
-            }
-
-            .card-title {
-              display: none;
-
-              &.book {
-                display: block;
-                font-size: 1.125rem;
-                padding: 0;
-              }
-            }
-          }
         }
       }
 
-      .info{
+      .info {
         margin: 0 0 .35px 0;
       }
     }
