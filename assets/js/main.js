@@ -1,5 +1,6 @@
 import timepicker from './vendor/timepicker';
 import owlCarousel from 'owl.carousel';
+
 require('jquery-ui-bundle');
 
 $(function () {
@@ -15,6 +16,15 @@ $(function () {
 });
 
 $(document).ready(function () {
+
+    if (navigator.userAgent.indexOf('Edge') >= 0){
+        $("a[href$='#booking']").click(function(e){
+            e.preventDefault();
+            var $target = $('html,body');
+            $target.animate({scrollTop:  $('#booking').offset().top}, 400);
+        });
+    }
+
     $('.card-deck').owlCarousel({
         loop: true,
         margin: 10,
