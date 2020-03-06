@@ -1,8 +1,10 @@
+import timepicker from './vendor/timepicker';
+import owlCarousel from 'owl.carousel';
+require('jquery-ui-bundle');
+
 $(function () {
     $('[data-toggle="tooltip"]').tooltip()
 })
-
-
 $(function () {
     $(".datepicker-input").datepicker({dateFormat: 'dd.mm.yy'});
 });
@@ -85,13 +87,13 @@ $(document).ready(function () {
         nav: false,
         dots: true
     });
-});
 
-const nav = document.getElementById('main-nav'),
-    burger = document.getElementById('burger');
+    const nav = document.getElementById('main-nav'),
+        burger = document.getElementById('burger');
 
-burger.addEventListener('click', function () {
-    nav.classList.toggle('is-open');
+    burger.addEventListener('click', function () {
+        nav.classList.toggle('is-open');
+    });
 });
 
 
